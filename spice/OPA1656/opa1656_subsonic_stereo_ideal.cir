@@ -1,0 +1,29 @@
+* OPA1656 stereo subsonic preamp - ideal opamp reference model
+* Sallen-Key high-pass 2nd-order ~9.96 Hz; +/-15 V rails represented for topology
+* This is not the TI OPA1656 macromodel. AC analysis only.
+* 1 V AC sources, source impedance 200 ohms each
+VLEFT SL 0 AC 1
+VRIGHT SR 0 AC 1
+RSL SL LIN 200
+RSR SR RIN 200
+* LEFT (OPA1656 A): 3=+, 2=-, 1=OUT
+C1L LIN AL 1u
+C2L AL BL 1u
+RFL AL OUTL 11.3k
+RGL BL 0 22.6k
+EL OUTL 0 BL 0 1
+* RIGHT (OPA1656 B): 5=+, 6=-, 7=OUT
+C1R RIN AR 1u
+C2R AR BR 1u
+RFR AR OUTR 11.3k
+RGR BR 0 22.6k
+ER OUTR 0 BR 0 1
+* Optional output coupling (enable by altering netlist as desired):
+* COUTL OUTL ACL 10u
+* RBLEEDL ACL 0 100k
+* RLOADL ACL 0 10k
+* COUTR OUTR ACR 10u
+* RBLEEDR ACR 0 100k
+* RLOADR ACR 0 10k
+.ac dec 200 0.1 100000
+.end
