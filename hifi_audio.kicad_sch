@@ -10,8 +10,54 @@
 	)
 	(lib_symbols)
 	(sheet
-		(at 45.72 40.64)
-		(size 12.7 8.89)
+		(at 13.97 15.24)
+		(size 12.7 6.35)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "434ca058-052a-49ac-818c-ed2d85b34c25")
+		(property "Sheetname" "Bancada_Simulacao"
+			(at 13.97 14.5284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Bancada_Simulacao.kicad_sch"
+			(at 13.97 22.1746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "hifi_audio"
+				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 13.97 27.94)
+		(size 12.7 6.35)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -26,7 +72,7 @@
 		)
 		(uuid "84133fac-ecf2-4b99-8e78-8acda53d47db")
 		(property "Sheetname" "fonte_alimentacao"
-			(at 45.72 39.9284 0)
+			(at 13.97 27.2284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -37,7 +83,7 @@
 			)
 		)
 		(property "Sheetfile" "fonte_alimentacao.kicad_sch"
-			(at 45.72 50.1146 0)
+			(at 13.97 34.8746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -51,6 +97,52 @@
 			(project "hifi_audio"
 				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 13.97 40.64)
+		(size 12.7 6.35)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ad6bf775-41d3-4b77-b1e8-7e04674efb8f")
+		(property "Sheetname" "subbass"
+			(at 13.97 39.9284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "subbass.kicad_sch"
+			(at 13.97 47.5746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "hifi_audio"
+				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373"
+					(page "4")
 				)
 			)
 		)

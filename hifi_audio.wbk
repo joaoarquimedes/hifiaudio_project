@@ -3,9 +3,19 @@
   "last_sch_text_sim_command": "",
   "tabs": [
     {
+      "analysis": "OP",
+      "commands": [
+        ".op",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ]
+    },
+    {
       "analysis": "TRAN",
       "commands": [
-        ".tran 100u 1 0 100u uic",
+        ".tran 1u 10m 0 1u",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -15,25 +25,87 @@
       "margins": {
         "bottom": 45,
         "left": 70,
-        "right": 160,
+        "right": 70,
         "top": 30
       },
       "measurements": [],
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(228, 26, 28)",
-          "signal": "I(C1)",
-          "trace_type": 258
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(Net-_U1A-+_)",
+          "trace_type": 257
         },
         {
-          "color": "rgb(166, 86, 40)",
-          "signal": "P(C1)",
-          "trace_type": 272
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(Net-_U1A--_)",
+          "trace_type": 257
+        }
+      ]
+    },
+    {
+      "analysis": "AC",
+      "commands": [
+        ".ac dec 100 10 100k",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(255, 189, 26)",
+          "signal": "V(Net-_C4-Pad1_) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(Net-_C4-Pad1_) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(228, 43, 100)",
+          "signal": "V(Net-_U1A-+_) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(Net-_U1A-+_) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(Net-_U1A--_) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "cursor1": {
+            "position": 39.98443264440603,
+            "x_format": "3~Hz",
+            "y_format": "3~dB"
+          },
+          "cursorD": {
+            "x_format": "3~Hz",
+            "y_format": "3~dB"
+          },
+          "signal": "V(Net-_U1A--_) (gain)",
+          "trace_type": 521
         }
       ]
     }
   ],
-  "user_defined_signals": [],
+  "user_defined_signals": [
+    "V(+V)-V(-V)"
+  ],
   "version": 7
 }

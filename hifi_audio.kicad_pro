@@ -673,7 +673,7 @@
         "uuid": "cacffc98-2318-42a9-a4e2-e2aa2b951373"
       }
     ],
-    "used_designators": "#PWR1-3,C1,J1,L1,R1,U1-3,V1",
+    "used_designators": "#FLG1-3,#PWR1-12,C1-4,J1,L1,R1-4,U1-3,V1-3",
     "variants": []
   },
   "sheets": [
@@ -684,6 +684,14 @@
     [
       "84133fac-ecf2-4b99-8e78-8acda53d47db",
       "fonte_alimentacao"
+    ],
+    [
+      "434ca058-052a-49ac-818c-ed2d85b34c25",
+      "Bancada_Simulacao"
+    ],
+    [
+      "ad6bf775-41d3-4b77-b1e8-7e04674efb8f",
+      "subbass"
     ]
   ],
   "text_variables": {},
