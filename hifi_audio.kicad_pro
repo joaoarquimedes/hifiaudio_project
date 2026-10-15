@@ -673,13 +673,17 @@
         "uuid": "cacffc98-2318-42a9-a4e2-e2aa2b951373"
       }
     ],
-    "used_designators": "#PWR1-2,C1,J1,L1,R1,V1",
+    "used_designators": "#PWR1-3,C1,J1,L1,R1,U1-3,V1",
     "variants": []
   },
   "sheets": [
     [
       "cacffc98-2318-42a9-a4e2-e2aa2b951373",
       "hifi_audio"
+    ],
+    [
+      "84133fac-ecf2-4b99-8e78-8acda53d47db",
+      "fonte_alimentacao"
     ]
   ],
   "text_variables": {},
