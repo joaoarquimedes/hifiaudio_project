@@ -1,0 +1,45 @@
+# KiCad 10 — Amplificador Hi-Fi
+# Versionar: *.kicad_pro, *.kicad_sch, *.kicad_pcb,
+# bibliotecas personalizadas, modelos SPICE e documentação.
+
+# Preferências locais e arquivos de bloqueio
+*.kicad_prl
+*.lck
+*.kicad_sch.lck
+*.kicad_pcb.lck
+~*.lck
+
+# Backups automáticos e salvamentos de recuperação
+*-backups/
+_autosave-*
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.bak
+*.bck
+
+# Arquivos temporários e de sistema
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# Saídas de simulação SPICE (manter modelos e arquivos de configuração)
+*.raw
+*.tr0
+*.tr1
+*.ac0
+*.sw0
+*.noise
+
+# Artefatos de compilação / exportação (caso sejam gerados localmente)
+*.gbr
+*.gbrjob
+*.drl
+*.pos
+*.rpt
+*.step
+*.stp
+
+# Observação: não ignorar *.lib, *.sub, *.cir ou *.model,
+# pois podem ser necessários para reproduzir a simulação SPICE.

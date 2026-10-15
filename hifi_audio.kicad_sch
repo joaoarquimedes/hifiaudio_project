@@ -1,0 +1,18 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "cacffc98-2318-42a9-a4e2-e2aa2b951373")
+	(paper "A4")
+	(title_block
+		(title "HiFi Audio Amplify")
+		(rev "v1.0.0")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
