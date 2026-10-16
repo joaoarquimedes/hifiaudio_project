@@ -15,7 +15,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 100u 1 0 100u",
+        ".tran 100u 1 0 20u",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -34,22 +34,27 @@
         {
           "color": "rgb(152, 78, 163)",
           "signal": "V(+V)",
-          "trace_type": 257
+          "trace_type": 1
         },
         {
           "color": "rgb(255, 127, 0)",
           "signal": "V(-V)",
-          "trace_type": 257
+          "trace_type": 1
+        },
+        {
+          "color": "rgb(228, 179, 68)",
+          "signal": "V(/subbass/CTRL_PASSA)",
+          "trace_type": 1
         },
         {
           "color": "rgb(55, 126, 184)",
           "signal": "V(/subbass/VOUT_HP_SUB)",
-          "trace_type": 257
+          "trace_type": 1
         },
         {
-          "color": "rgb(77, 175, 74)",
-          "signal": "V(/subbass/VOUT_SUB)",
-          "trace_type": 257
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(/subbass/VOUT_SUB_MUTE)",
+          "trace_type": 1
         }
       ]
     },
@@ -89,6 +94,11 @@
         {
           "color": "rgb(228, 26, 28)",
           "signal": "V(/subbass/VOUT_HP_SUB) (gain)",
+          "trace_type": 521
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(/subbass/VOUT_SUB_MUTE) (gain)",
           "trace_type": 521
         }
       ]

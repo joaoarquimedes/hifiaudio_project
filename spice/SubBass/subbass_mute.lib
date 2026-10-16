@@ -1,0 +1,30 @@
+* Functional study model: dual-rail supervisor for the SubBass series mute.
+* Not a physical IC or a manufacturing-ready protection circuit.
+* VP/VN are the signed analog rails relative to GND.
+* CTRL high = audio passes through the external normally-open switch S1.
+* Both rails must exceed 13 V magnitude to qualify; either below 12 V resets.
+* 200 ms nominal qualification after rails become valid; ~1 us reset time constant.
+* RAIL_OK and TIMER are observable diagnostic outputs in volts.
+.SUBCKT SUBBASS_MUTE_CTRL VP VN GND CTRL RAIL_OK TIMER
+BREF REF GND V={max(0,min(5,V(VP,GND)))}
+BSENSE SENSE GND V={min(V(VP,GND),-V(VN,GND))}
+SVALID REF RAIL_OK SENSE GND RAIL_VALID OFF
+RVALID RAIL_OK GND 10k
+BBAD BAD GND V={V(RAIL_OK,GND)>2.5 ? 0 : 5}
+BCHARGE CHARGE GND V={V(RAIL_OK,GND)>2.5 ? 5 : 0}
+RDELAY CHARGE TIMER 200k
+CDELAY TIMER GND 1u
+SRESET TIMER GND BAD GND TIMER_RESET
+BCTRL CTRL GND V={(V(RAIL_OK,GND)>2.5 && V(TIMER,GND)>3.160602794) ? V(REF,GND) : 0}
+.MODEL RAIL_VALID SW(VT=12.5 VH=0.5 RON=1 ROFF=1e12)
+.MODEL TIMER_RESET SW(VT=2.5 VH=0 RON=1 ROFF=1e12)
+.ENDS SUBBASS_MUTE_CTRL
+
+* Ideal SERIES audio mute, equivalent to RON=1 ohm / ROFF=1 Gohm.
+* Behavioral conductance gives consistent DC, TRAN and small-signal AC results.
+* The native SW in this installed ngspice build stayed open during AC even
+* with a DC 5 V control; do not use that AC result as filter attenuation.
+* CTRL high = PASS. No physical charge injection, bounce or turn-off delay.
+.SUBCKT SUBBASS_MUTE_SWITCH IN OUT CTRL GND
+BPATH IN OUT I={V(IN,OUT)*(V(CTRL,GND)>2.5 ? 1 : 1e-9)}
+.ENDS SUBBASS_MUTE_SWITCH

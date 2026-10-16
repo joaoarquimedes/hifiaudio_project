@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Audio_HiFi")(type "KiCad")(uri "${KIPRJMOD}/Audio_HiFi.kicad_sym")(options "")(descr "Símbolos Hi-Fi e modelos funcionais de estudo"))
+)
