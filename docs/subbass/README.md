@@ -4,9 +4,10 @@ Os filtros Sallen-Key com OPA1656 permanecem dimensionados para passa-baixas de 
 
 **Estado: proposta de circuito revisada e 25 cenários SPICE concluídos sob modelos locais; não pronta para fabricação.** O teste do comparador usa uma aproximação estática sem atraso temporal. Portanto, os picos baixos nas falhas abruptas são limites idealizados da simulação, não evidência de proteção real. O CI especifica 560 ns típicos a 100 mV de overdrive, sem máximo garantido nessa condição; o circuito ainda precisa ser caracterizado em bancada.
 
-O PCB do projeto está vazio: não há footprints, cobre, contorno ou conectores, e o DRC acusa falta de contorno. Também falta fechar a fronteira física com o estágio OPA1622, conectores e requisitos mecânicos/elétricos. A aprovação de hardware permanece negada. Não fabricar nem conectar fones com base apenas nestas simulações.
+A PCB agora contém footprints e contorno como estudo de posicionamento A0, com conectores modulares de alimentação e áudio. Ainda não há roteamento válido (87 itens sem conexão no DRC), e faltam as placas da fonte e do OPA1622. A aprovação de hardware permanece negada. Não fabricar nem conectar fones com base apenas nestas simulações.
 
 - [Dimensionamento, BOM, limites e roteiro de bancada](hardware/README.md)
+- [Arquitetura modular, interfaces e estado da PCB](hardware/arquitetura_modular.md)
 - [BOM do mute](hardware/bom_mute.csv)
 - [Últimos resultados SPICE](resultados.json)
 - [Estudo ideal EV1](funcional_ev1.md), histórico; seus resultados não especificam a implementação física.

@@ -4,7 +4,7 @@
 
 ## Resultado da avaliação
 
-**25 cenários SPICE concluíram com `FUNCTIONAL_PASS_WITH_LIMITATIONS`; isso não aprova o hardware para fabricação.** O circuito lógico passou pelos critérios funcionais codificados, mas a modelagem da resposta temporal do novo comparador é idealizada. A placa KiCad continua vazia e não tem contorno; DRC reporta `invalid_outline`.
+**25 cenários SPICE concluíram com `FUNCTIONAL_PASS_WITH_LIMITATIONS`; isso não aprova o hardware para fabricação.** O circuito lógico passou pelos critérios funcionais codificados, mas a modelagem da resposta temporal do novo comparador é idealizada. A PCB está em estudo de posicionamento A0, com contorno e footprints, mas sem roteamento elétrico validado; o DRC identifica 87 itens sem conexão. A arquitetura modular e o pinout estão em [arquitetura_modular.md](arquitetura_modular.md).
 
 | Ensaio | Resultado no modelo atual |
 |---|---|
@@ -21,7 +21,7 @@
 
 O resultado de HW1 com supervisor apenas previa excursões de −2,102 V / +1,765 V em ensaio semelhante. Isso motivou U6; não deve ser comparado como prova quantitativa de melhoria, porque os dois resultados usam modelos diferentes. O OPA1656 fora da alimentação normal também torna esses transitórios exploratórios. Não conectar fones supondo proteção contra colapso abrupto.
 
-ERC do esquemático: zero ocorrências com as regras do projeto. A lista de posições compradas aumentou para 20. Alguns novos itens têm MPN definido, mas os passivos originais R8–R16 e C7–C10 ainda não têm código comercial fechado. Portanto, BOM e footprints continuam precisando de conferência com itens efetivamente comprados. A placa `hifi_audio.kicad_pcb` não contém footprints, trilhas, zonas ou `Edge.Cuts`; DRC falha por falta de contorno.
+ERC do esquemático: zero ocorrências com as regras do projeto. A lista de posições compradas aumentou para 20. Alguns novos itens têm MPN definido, mas os passivos originais R8–R16 e C7–C10 ainda não têm código comercial fechado. Portanto, BOM e footprints continuam precisando de conferência com itens efetivamente comprados. A placa `hifi_audio.kicad_pcb` contém footprints e `Edge.Cuts`, mas não possui roteamento válido. O DRC de posicionamento encontra zero violações geométricas e 87 itens sem conexão; não liberar fabricação.
 
 ## Componentes e folha
 
@@ -116,4 +116,4 @@ No KiCad, as fontes permanecem nominais em DC ±15 V e senoide de 20 Hz. Para ob
 - [ADG5412F — página oficial](https://www.analog.com/en/products/adg5412f.html) e [datasheet, Rev. C](https://www.analog.com/media/en/technical-documentation/data-sheets/ADG5412F_5413F.pdf): pinagem TSSOP, proteção do source, limites do drain, RON e carga injetada.
 - [BAT54WS — Diodes Incorporated](https://www.diodes.com/datasheet/download/BAT54WS.pdf): encapsulamento, polaridade e características do clamp.
 
-O esquema tem valores e critérios de teste definidos, mas ainda não há interfaces físicas completas nem PCB. Para fabricação, faltam definir se a placa inclui OPA1622, conectores e pinagem, requisitos de sinal/carga, envelope e fixação mecânicos, MPNs de todos os passivos, modelo temporal conservador, medições de bancada (transientes, THD+N, ruído e temperatura), roteamento, DRC aprovado e arquivos Gerber/fabricação.
+O esquema tem valores e critérios de teste definidos, mas a PCB está apenas na etapa de posicionamento e a fonte/OPA1622 ainda não têm módulos implementados. Para fabricação, faltam fechar a interface com o módulo OPA1622, definir conectores e pinagem do produto, requisitos de sinal/carga, envelope e fixação mecânicos, MPNs de todos os passivos, modelo temporal conservador, medições de bancada (transientes, THD+N, ruído e temperatura), roteamento, DRC aprovado e arquivos Gerber/fabricação.

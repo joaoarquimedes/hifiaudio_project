@@ -1777,7 +1777,166 @@
 (property "Reference" "TP" (at 0 4.064 0) (effects (font (size 1 1))))
 (property "Value" "TESTPOINT" (at 0 6.35 0) (hide yes) (effects (font (size 1 1))))
 (symbol "TESTPOINT_0_1" (circle (center 0 1.27) (radius 0.635) (stroke (width 0.1524) (type default)) (fill (type none))))
-(symbol "TESTPOINT_1_1" (pin passive line (at 0 0 90) (length 0.635) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))))))
+(symbol "TESTPOINT_1_1" (pin passive line (at 0 0 90) (length 0.635) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+(symbol "Connector_Generic:Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
 
 	(junction
 		(at 132.08 165.1)
@@ -2874,7 +3033,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 167.64 95.5548 0)
 			(hide yes)
 			(show_name no)
@@ -2956,7 +3115,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 68.2752 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -3036,7 +3195,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 69.85 97.028 90)
 			(hide yes)
 			(show_name no)
@@ -3106,7 +3265,7 @@
 				)
 			)
 		)
-		(property "Value" "22,6kΩ"
+		(property "Value" "22.6k"
 			(at 176.53 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3116,7 +3275,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 176.53 81.788 90)
 			(hide yes)
 			(show_name no)
@@ -3196,7 +3355,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 83.82 81.5848 0)
 			(hide yes)
 			(show_name no)
@@ -3421,7 +3580,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 158.242 171.45 90)
 			(hide yes)
 			(show_name no)
@@ -3633,7 +3792,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "11,3kΩ"
+		(property "Value" "11.3k"
 			(at 179.832 106.172 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3644,7 +3803,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 182.88 99.822 90)
 			(hide yes)
 			(show_name no)
@@ -3724,7 +3883,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 52.07 97.028 90)
 			(hide yes)
 			(show_name no)
@@ -3935,7 +4094,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 130.302 171.45 90)
 			(hide yes)
 			(show_name no)
@@ -4173,7 +4332,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 164.7952 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4255,7 +4414,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 127.9652 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4415,7 +4574,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 180.34 95.5548 0)
 			(hide yes)
 			(show_name no)
@@ -4588,4 +4747,179 @@
 (text "U4: supervisão +UV/-UV; U5: chave protegida. Ver detalhes na folha Mute_SubBass." (at 190.5 125.73 0) (effects (font (size 0.9 0.9)) (justify left top)) (uuid "3fa4ec7e-cf1f-4d85-9827-7a3e17599064"))
 (symbol (lib_id "Audio_HiFi:TESTPOINT") (at 269.24 78.74 0) (unit 1) (exclude_from_sim yes) (in_bom no) (on_board yes) (uuid "3e8deb5f-fdec-4b15-9dd3-c3602bec8dce") (property "Reference" "TP1" (at 269.24 74.92999999999999 0) (effects (font (size 1 1)))) (property "Value" "TestPoint" (at 269.24 78.74 0) (hide yes) (effects (font (size 1 1)))) (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 269.24 78.74 0) (hide yes) (effects (font (size 1 1)))) (pin "1" (uuid "0e6a0b3b-af88-49f8-971c-455aaef8bbc9")) (instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "TP1") (unit 1)))))
 (symbol (lib_id "Audio_HiFi:TESTPOINT") (at 269.24 90.17 0) (unit 1) (exclude_from_sim yes) (in_bom no) (on_board yes) (uuid "effffab6-5e48-4466-b9b4-a85cdd72b3bf") (property "Reference" "TP2" (at 269.24 86.36 0) (effects (font (size 1 1)))) (property "Value" "TestPoint" (at 269.24 90.17 0) (hide yes) (effects (font (size 1 1)))) (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 269.24 90.17 0) (hide yes) (effects (font (size 1 1)))) (pin "1" (uuid "461f0baf-2120-4cbe-8c32-a12e1cf68b3b")) (instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "TP2") (unit 1)))))
+(symbol (lib_id "Connector_Generic:Conn_01x02") (at 360.68 149.86 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "0bd7677b-30c2-4359-a612-56d5efa216d9")
+(property "Reference" "J2" (at 365.76 147.32000000000002 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "AUDIO_IN" (at 365.76 149.86 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" (at 360.68 149.86 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "https://www.jst-mfg.com/product/index.php?series=287" (at 360.68 149.86 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "509f46f0-24ee-4fbb-84fe-ce79dd9a923e")) (pin "2" (uuid "81676a16-c6b2-4ca5-ab9f-f88bae7b568c"))
+(instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "J2") (unit 1)))))
+
+(symbol (lib_id "Connector_Generic:Conn_01x02") (at 360.68 170.18 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "09a5d8be-9d75-4549-8e3b-6dd29ba9453f")
+(property "Reference" "J3" (at 365.76 167.64000000000001 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "AUDIO_OUT" (at 365.76 170.18 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" (at 360.68 170.18 0) (hide yes) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "https://www.jst-mfg.com/product/index.php?series=287" (at 360.68 170.18 0) (hide yes) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "7e35cc48-b9a1-4712-bcf4-bba9b6573c0e")) (pin "2" (uuid "b026ccfd-efd0-4472-aca8-4f04ff04d0aa"))
+(instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "J3") (unit 1)))))
+(wire (pts (xy 355.6 149.86) (xy 342.9 149.86)) (stroke (width 0) (type default)) (uuid "3e45f15d-4ccb-4c36-945a-c5f7bec63557"))
+(label "VIN_SUB" (at 342.9 149.86 180) (effects (font (size 1 1)) (justify right bottom)) (uuid "8ba6aa59-8636-49a3-b701-eceaac6991d3"))
+(wire (pts (xy 355.6 170.18) (xy 342.9 170.18)) (stroke (width 0) (type default)) (uuid "99d9e86e-1dd4-4ce9-b102-fec07c278a55"))
+(label "VOUT_SUB_MUTE" (at 342.9 170.18 180) (effects (font (size 1 1)) (justify right bottom)) (uuid "0069ca38-8859-4506-ac6d-a1aaddb23134"))
+(text "J2 AUDIO_IN (1=sinal, 2=GND); J3 AUDIO_OUT para estágio OPA1622 externo." (at 294.64 180.34 0) (effects (font (size 1 1)) (justify left top)) (uuid "a1421ce3-46da-48c8-8829-9de61fe2821d"))
+(symbol
+		(lib_id "power:GND")
+		(at 355.6 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1679347c-4efa-4f2e-b35d-44f636983083")
+		(property "Reference" "#PWR050"
+			(at 355.6 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 355.6 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 355.6 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 355.6 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 355.6 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9e50fc55-fac9-44f0-94dc-8c49a45f27b5")
+		)
+		(instances
+			(project "hifi_audio"
+				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)(symbol
+		(lib_id "power:GND")
+		(at 355.6 172.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "62e867b3-bd6c-494a-a524-4ddc9a6b23ee")
+		(property "Reference" "#PWR051"
+			(at 355.6 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 355.6 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 355.6 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 355.6 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 355.6 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f33764d2-a541-4008-b59a-8aa057cbd165")
+		)
+		(instances
+			(project "hifi_audio"
+				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f"
+					(reference "#PWR051")
+					(unit 1)
+				)
+			)
+		)
+	)
 )
