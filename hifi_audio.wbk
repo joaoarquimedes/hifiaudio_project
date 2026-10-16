@@ -15,7 +15,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 20u 200m 0 20u",
+        ".tran 100u 1 0 100u",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -30,7 +30,28 @@
       },
       "measurements": [],
       "showGrid": true,
-      "traces": []
+      "traces": [
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(+V)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(-V)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(/subbass/VOUT_HP_SUB)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(/subbass/VOUT_SUB)",
+          "trace_type": 257
+        }
+      ]
     },
     {
       "analysis": "AC",
@@ -52,9 +73,9 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(228, 200, 45)",
+          "color": "rgb(228, 179, 68)",
           "cursor1": {
-            "position": 10.000458049135817,
+            "position": 19.999740988096136,
             "x_format": "3~s",
             "y_format": "3~V"
           },
