@@ -30,23 +30,12 @@
       },
       "measurements": [],
       "showGrid": true,
-      "traces": [
-        {
-          "color": "rgb(228, 26, 28)",
-          "signal": "V(/subbass/VIN_SUB)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(55, 126, 184)",
-          "signal": "V(/subbass/VOUT_SUB)",
-          "trace_type": 1
-        }
-      ]
+      "traces": []
     },
     {
       "analysis": "AC",
       "commands": [
-        ".ac dec 100 10 1k",
+        ".ac dec 100 100m 1k",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -63,9 +52,9 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(77, 175, 74)",
+          "color": "rgb(228, 200, 45)",
           "cursor1": {
-            "position": 39.983006160680915,
+            "position": 10.000458049135817,
             "x_format": "3~s",
             "y_format": "3~V"
           },
@@ -73,7 +62,12 @@
             "x_format": "3~s",
             "y_format": "3~V"
           },
-          "signal": "V(/subbass/VOUT_SUB) (gain)",
+          "signal": "V(/subbass/VOUT_HP_SUB) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(/subbass/VOUT_HP_SUB) (gain)",
           "trace_type": 521
         }
       ]
