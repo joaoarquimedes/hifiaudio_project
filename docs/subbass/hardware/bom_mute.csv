@@ -15,3 +15,7 @@ R15,100k,1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Estado bloqueado sem alime
 R16,680,1%,0.25W,,,Resistor_SMD:R_1206_3216Metric,,,Limita corrente de dreno e isola C10; exigir capacidade de pulso >=15uJ,1
 U4,LTC2909ITS8-2.5,,,,,Package_TO_SOT_SMD:SOT-23-8,LTC2909ITS8-2.5#TRMPBF,https://www.analog.com/media/en/technical-documentation/data-sheets/2909fb.pdf,Supervisor +UV/-UV; SEL aberto; TMR em GND,1
 U5,ADG5412FBRUZ,,,,,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,ADG5412FBRUZ,https://www.analog.com/media/en/technical-documentation/data-sheets/ADG5412F_5413F.pdf,Chave analógica protegida; canal 1 em série; canais 2/3/4 desativados,1
+C11,100n,10%,,50V,X7R,Capacitor_SMD:C_0805_2012Metric,GRM21BR71H104KA01L,https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01L,Desacoplamento U6,1
+R17,10k,1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Divisor VREF_1V/2 para comparador rápido,1
+R18,10k,1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,CRCW080510K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,Divisor VREF_1V/2 para comparador rápido,1
+U6,TLV1702AIDGKR,,,,,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,TLV1702AIDGKR,https://www.ti.com/lit/ds/symlink/tlv1702.pdf,Inibição rápida wired-OR dos trilhos; propagação típica 560ns,1

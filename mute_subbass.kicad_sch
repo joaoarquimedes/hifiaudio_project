@@ -1,5 +1,5 @@
 (kicad_sch (version 20260306) (generator "eeschema") (generator_version "10.0")
-(uuid "cb838a63-d5e2-44ba-a4c7-99a4e5743183") (paper "A3") (title_block (title "SubBass — mute físico") (rev "estudo-HW1"))
+(uuid "cb838a63-d5e2-44ba-a4c7-99a4e5743183") (paper "A3") (title_block (title "SubBass — mute físico") (rev "estudo-HW2"))
 (lib_symbols
 (symbol "Audio_HiFi:LTC2909ITS8-2.5" (pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
 (property "Reference" "U" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
@@ -728,7 +728,20 @@
 (property "Sim.Pins" "1=IN1 2=D1 3=S1 4=VSS 5=ZREF 6=S4 7=D4 8=IN4 9=IN3 10=D3 11=S3 12=FF 13=VDD 14=S2 15=D2 16=IN2" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
 (property "Description" "Componente físico; macromodelo de estudo local, não modelo validado do fabricante" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
 (symbol "ADG5412FBRUZ_0_1" (rectangle (start -20.32 48.26) (end 20.32 -43.18) (stroke (width .254) (type default)) (fill (type background))))
-(symbol "ADG5412FBRUZ_1_1" (pin input line (at -25.4 20.32 0) (length 5.08) (name "IN1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin passive line (at 25.4 30.48 180) (length 5.08) (name "D1" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))(pin passive line (at -25.4 30.48 0) (length 5.08) (name "S1" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))(pin power_in line (at 0 -48.26 90) (length 5.08) (name "V-" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))(pin power_in line (at -10.16 -48.26 90) (length 5.08) (name "GND" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1)))))(pin passive line (at -25.4 -30.48 0) (length 5.08) (name "S4" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1)))))(pin passive line (at 25.4 -30.48 180) (length 5.08) (name "D4" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1)))))(pin input line (at -25.4 -38.1 0) (length 5.08) (name "IN4" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1)))))(pin input line (at -25.4 -20.32 0) (length 5.08) (name "IN3" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1)))))(pin passive line (at 25.4 -12.7 180) (length 5.08) (name "D3" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1)))))(pin passive line (at -25.4 -12.7 0) (length 5.08) (name "S3" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1)))))(pin output line (at 25.4 -35.56 180) (length 5.08) (name "FF" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1)))))(pin power_in line (at 0 53.34 270) (length 5.08) (name "VDD" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1)))))(pin passive line (at -25.4 5.08 0) (length 5.08) (name "S2" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1)))))(pin passive line (at 25.4 5.08 180) (length 5.08) (name "D2" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1)))))(pin input line (at -25.4 -2.54 0) (length 5.08) (name "IN2" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1))))))))
+(symbol "ADG5412FBRUZ_1_1" (pin input line (at -25.4 20.32 0) (length 5.08) (name "IN1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))(pin passive line (at 25.4 30.48 180) (length 5.08) (name "D1" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))(pin passive line (at -25.4 30.48 0) (length 5.08) (name "S1" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))(pin power_in line (at 0 -48.26 90) (length 5.08) (name "V-" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))(pin power_in line (at -10.16 -48.26 90) (length 5.08) (name "GND" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1)))))(pin passive line (at -25.4 -30.48 0) (length 5.08) (name "S4" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1)))))(pin passive line (at 25.4 -30.48 180) (length 5.08) (name "D4" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1)))))(pin input line (at -25.4 -38.1 0) (length 5.08) (name "IN4" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1)))))(pin input line (at -25.4 -20.32 0) (length 5.08) (name "IN3" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1)))))(pin passive line (at 25.4 -12.7 180) (length 5.08) (name "D3" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1)))))(pin passive line (at -25.4 -12.7 0) (length 5.08) (name "S3" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1)))))(pin output line (at 25.4 -35.56 180) (length 5.08) (name "FF" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1)))))(pin power_in line (at 0 53.34 270) (length 5.08) (name "VDD" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1)))))(pin passive line (at -25.4 5.08 0) (length 5.08) (name "S2" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1)))))(pin passive line (at 25.4 5.08 180) (length 5.08) (name "D2" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1)))))(pin input line (at -25.4 -2.54 0) (length 5.08) (name "IN2" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1)))))))
+	(symbol "Audio_HiFi:TLV1702AIDGKR" (pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(property "Value" "TLV1702AIDGKR" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(property "Footprint" "Package_SO:VSSOP-8_2.3x2mm_P0.5mm" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv1702.pdf" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(property "Sim.Library" "spice/SubBass/subbass_hardware.lib" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(property "Sim.Name" "TLV1702_FAST_STUDY" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(property "Sim.Device" "SUBCKT" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(property "Sim.Pins" "1=OUT1 2=IN1M 3=IN1P 4=VSS 5=IN2P 6=IN2M 7=OUT2 8=VCC" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(property "Description" "Comparador rápido de falha dos trilhos; atraso típico 560 ns, requer validação de bancada" (at 0 0 0) (hide yes) (effects (font (size 1 1))))
+(symbol "TLV1702AIDGKR_0_1" (rectangle (start -12.7 12.7) (end 12.7 -12.7) (stroke (width .254) (type default)) (fill (type background))))
+(symbol "TLV1702AIDGKR_1_1" (pin open_collector line (at 15.24 10.16 180) (length 5.08) (name "1OUT" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin input line (at -15.24 10.16 0) (length 5.08) (name "1IN-" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1))))) (pin input line (at -15.24 2.54 0) (length 5.08) (name "1IN+" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1))))) (pin power_in line (at -7.62 -15.24 90) (length 5.08) (name "V-" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1))))) (pin input line (at -15.24 -2.54 0) (length 5.08) (name "2IN+" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1))))) (pin input line (at -15.24 -10.16 0) (length 5.08) (name "2IN-" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1))))) (pin open_collector line (at 15.24 -10.16 180) (length 5.08) (name "2OUT" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1))))) (pin power_in line (at 7.62 15.24 270) (length 5.08) (name "V+" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1)))))))
+	)
 (symbol (lib_id "Audio_HiFi:LTC2909ITS8-2.5") (at 127 99.06 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c8e90a94-1e56-40c4-bc3d-5552b1856867")
 (property "Reference" "U4" (at 127 71.12 0) (effects (font (size 1 1))))
 (property "Value" "LTC2909ITS8-2.5" (at 127 73.66 0) (effects (font (size 1 1))))
@@ -3084,7 +3097,319 @@
 (text "Limiar nominal: +12,95 V / −12,55 V. TMR em GND: 200 ms típicos (150–260 ms)." (at 20.32 35.56 0) (effects (font (size 1 1)) (justify left top)) (uuid "00839e34-e5c5-4b1b-bc19-28cf5a4b379d"))
 (text "SEL deve ficar aberto. Sem histerese de 1 V neste modo; a proteção usa filtragem e novo timeout." (at 101.6 144.78 0) (effects (font (size 1 1)) (justify left top)) (uuid "67293c47-3b86-484b-83e1-ca91fe93d7a4"))
 (text "D1: cátodo em ADJ_NEG, ânodo em GND. Verificar clamp com +V ausente." (at 20.32 175.26 0) (effects (font (size 1 1)) (justify left top)) (uuid "e5b050b9-69a4-4aa9-be0e-5b363cdfe19c"))
-(text "S1 protegido recebe o áudio; D1 do CI entrega a saída. FF aberto; canais não usados em GND." (at 228.6 180.34 0) (effects (font (size 1 1)) (justify left top)) (uuid "a420de10-dd83-43da-9c52-bf8dc4cc935c"))
+(text "S1 protegido recebe o áudio; D1 do CI entrega a saída. FF aberto; canais não usados em GND." (at 20.32 205.74 0) (effects (font (size 1 1)) (justify left top)) (uuid "a420de10-dd83-43da-9c52-bf8dc4cc935c"))
 (text "Modelos SPICE locais aproximam limites e atrasos; não são modelos oficiais nem validam THD/estalos." (at 20.32 223.52 0) (effects (font (size 1 1)) (justify left top)) (uuid "0253230e-5eca-4142-bc89-064589f3979e"))
 (text "C10 limita injeção de carga; R16 no dreno limita retorno de corrente e isola a carga capacitiva. Validar comutação sob áudio em bancada." (at 20.32 231.14 0) (effects (font (size 1 1)) (justify left top)) (uuid "ccea9f19-dd2a-443b-a383-009edef8d028"))
-(embedded_fonts no))
+(embedded_fonts no)
+(symbol (lib_id "Audio_HiFi:TLV1702AIDGKR") (at 228.6 147.32 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "347badae-da56-418d-937c-00793ce96d09")
+(property "Reference" "U6" (at 228.6 129.54 0) (effects (font (size 1 1))))
+(property "Value" "TLV1702AIDGKR" (at 228.6 127 0) (effects (font (size 1 1))))
+(property "Footprint" "Package_SO:VSSOP-8_2.3x2mm_P0.5mm" (at 228.6 147.32 0) (hide yes) (effects (font (size 1 1))))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv1702.pdf" (at 228.6 147.32 0) (hide yes) (effects (font (size 1 1))))
+(property "MPN" "TLV1702AIDGKR" (at 228.6 147.32 0) (hide yes) (effects (font (size 1 1))))
+(property "Description" "Fast rail-fault comparator; typical 560 ns, not a guaranteed max" (at 228.6 147.32 0) (hide yes) (effects (font (size 1 1))))
+(property "Sim.Library" "spice/SubBass/subbass_hardware.lib" (at 228.6 147.32 0) (hide yes) (effects (font (size 1 1))))
+(property "Sim.Name" "TLV1702_FAST_STUDY" (at 228.6 147.32 0) (hide yes) (effects (font (size 1 1))))
+(property "Sim.Device" "SUBCKT" (at 228.6 147.32 0) (hide yes) (effects (font (size 1 1))))
+(property "Sim.Pins" "1=OUT1 2=IN1M 3=IN1P 4=VSS 5=IN2P 6=IN2M 7=OUT2 8=VCC" (at 228.6 147.32 0) (hide yes) (effects (font (size 1 1))))
+(pin "1" (uuid "6151d353-8d94-4d83-ba42-15c91423c031"))
+(pin "2" (uuid "fff15770-4cb6-4a97-a00f-f16fb4b9d90e"))
+(pin "3" (uuid "90268486-01df-46a6-8c54-b47f1812a92b"))
+(pin "4" (uuid "f05cd31d-92a8-4eb0-971b-65a34e82ae9a"))
+(pin "5" (uuid "5846576f-d27b-43ce-b2df-c4a0f74a84bf"))
+(pin "6" (uuid "03f5d110-8a25-4d48-9cde-f3f41b352312"))
+(pin "7" (uuid "f89d31d5-2ab9-48bb-ba77-3404cdee99b7"))
+(pin "8" (uuid "3f15d1f5-d9ee-4d61-b61f-c1a7beb9b55b"))
+(instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f/cb838a63-d5e2-44ba-a4c7-99a4e5743183" (reference "U6") (unit 1)))))
+(wire (pts (xy 243.84 137.16) (xy 248.92000000000002 137.16)) (stroke (width 0) (type default)) (uuid "485b8cd1-d0de-4c77-9a76-b24972767976"))
+(label "CTRL_PASSA" (at 248.92000000000002 137.16 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "6b5d8411-81c8-49b8-b5b2-caa5d3475183"))
+(wire (pts (xy 213.35999999999999 137.16) (xy 208.27999999999997 137.16)) (stroke (width 0) (type default)) (uuid "bbd1d6ae-660e-45b2-8de6-242b432a1b7a"))
+(label "VTH_FAST" (at 208.27999999999997 137.16 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "a6a46dce-38d7-4c52-8f73-09777f7eaccd"))
+(wire (pts (xy 213.35999999999999 144.78) (xy 208.27999999999997 144.78)) (stroke (width 0) (type default)) (uuid "9c80545c-e4a1-4d51-b3e9-f7eb929847a6"))
+(label "ADJ_POS" (at 208.27999999999997 144.78 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "ee418dec-1b00-4426-8019-63143b74fa5b"))
+(wire (pts (xy 220.98 162.56) (xy 220.98 167.64000000000001)) (stroke (width 0) (type default)) (uuid "eecc7a71-ffc7-4926-b837-1a2047188f76"))
+
+(wire (pts (xy 213.35999999999999 149.85999999999999) (xy 208.27999999999997 149.85999999999999)) (stroke (width 0) (type default)) (uuid "324df718-c093-4fc9-9f35-ee28db8752f2"))
+(label "VTH_FAST" (at 208.27999999999997 149.85999999999999 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "be37286f-b8fc-44e1-9c83-bcda5846919a"))
+(wire (pts (xy 213.35999999999999 157.48) (xy 208.27999999999997 157.48)) (stroke (width 0) (type default)) (uuid "4c7a60be-1c9a-4f3b-9e93-7d256ba4817d"))
+(label "ADJ_NEG" (at 208.27999999999997 157.48 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "75e19bb1-4ab5-456b-8bdf-c76d12441613"))
+(wire (pts (xy 243.84 157.48) (xy 248.92000000000002 157.48)) (stroke (width 0) (type default)) (uuid "d15023d0-4bd6-4375-a603-1a7eccf6adac"))
+(label "CTRL_PASSA" (at 248.92000000000002 157.48 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "508657fb-62ba-48f1-96bf-6fcfe102c77b"))
+(wire (pts (xy 236.22 132.07999999999998) (xy 236.22 126.99999999999999)) (stroke (width 0) (type default)) (uuid "0d578472-6eb0-46eb-bfb7-471944f4d496"))
+(label "VCC_SUP" (at 236.22 126.99999999999999 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "ed7dc67e-6ade-4d50-9f40-f1ca221a0328"))
+(symbol (lib_id "Device:R") (at 180.34 172.72 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "97bd0675-744a-400d-9344-88358f954cec")
+(property "Reference" "R17" (at 182.88 170.18 0) (effects (font (size 1 1))))
+(property "Value" "10k" (at 182.88 172.72 0) (effects (font (size 1 1))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 180.34 172.72 0) (hide yes) (effects (font (size 1 1))))
+(property "Tolerance" "1%" (at 180.34 172.72 0) (hide yes) (effects (font (size 1 1))))
+(property "Power" "0.125W" (at 180.34 172.72 0) (hide yes) (effects (font (size 1 1))))
+(property "MPN" "CRCW080510K0FKEA" (at 180.34 172.72 0) (hide yes) (effects (font (size 1 1))))
+(pin "1" (uuid "02f161b3-71c9-49e8-9412-b4a2560744c3")) (pin "2" (uuid "42716fdd-8b84-4a24-9960-c2a83d80fc16")) (instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f/cb838a63-d5e2-44ba-a4c7-99a4e5743183" (reference "R17") (unit 1)))))
+(wire (pts (xy 180.34 168.91) (xy 180.34 163.82999999999998)) (stroke (width 0) (type default)) (uuid "ceb5cebc-f3ad-4913-bcb6-905565bdfba1"))
+(label "VREF_1V" (at 180.34 163.82999999999998 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "4cc42ee4-c70e-4887-a12f-bef2b966f273"))
+(wire (pts (xy 180.34 176.53) (xy 180.34 181.61)) (stroke (width 0) (type default)) (uuid "d5191384-7485-46c1-bd9e-3ed927cfeeb5"))
+(label "VTH_FAST" (at 180.34 181.61 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "2cce26dc-66f1-4e67-a313-29709bb30453"))
+(symbol (lib_id "Device:R") (at 180.34 193.04 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "069ccd26-4b38-4ce3-9aad-eff220769a49")
+(property "Reference" "R18" (at 182.88 190.5 0) (effects (font (size 1 1))))
+(property "Value" "10k" (at 182.88 193.04 0) (effects (font (size 1 1))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 180.34 193.04 0) (hide yes) (effects (font (size 1 1))))
+(property "Tolerance" "1%" (at 180.34 193.04 0) (hide yes) (effects (font (size 1 1))))
+(property "Power" "0.125W" (at 180.34 193.04 0) (hide yes) (effects (font (size 1 1))))
+(property "MPN" "CRCW080510K0FKEA" (at 180.34 193.04 0) (hide yes) (effects (font (size 1 1))))
+(pin "1" (uuid "229990c9-b398-4a29-82ac-017153b19581")) (pin "2" (uuid "2618375b-7b41-4de6-aaf4-95d4c3a3ca6f")) (instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f/cb838a63-d5e2-44ba-a4c7-99a4e5743183" (reference "R18") (unit 1)))))
+(wire (pts (xy 180.34 189.23) (xy 180.34 184.14999999999998)) (stroke (width 0) (type default)) (uuid "e3f94b70-fd54-4d4e-948b-840b4191085d"))
+(label "VTH_FAST" (at 180.34 184.14999999999998 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "e052d231-868d-4fc9-b7a4-331914ce4827"))
+(wire (pts (xy 180.34 196.85) (xy 180.34 201.93)) (stroke (width 0) (type default)) (uuid "78ac0dfb-298e-4d46-a649-65120771caf2"))
+
+(symbol (lib_id "Device:C") (at 264.16 180.34 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5e3c09fd-3720-433f-bd90-e23023ddb291")
+(property "Reference" "C11" (at 266.70000000000005 177.8 0) (effects (font (size 1 1))))
+(property "Value" "100n" (at 266.70000000000005 180.34 0) (effects (font (size 1 1))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 264.16 180.34 0) (hide yes) (effects (font (size 1 1))))
+(property "Voltage" "50V" (at 264.16 180.34 0) (hide yes) (effects (font (size 1 1))))
+(property "Dielectric" "X7R" (at 264.16 180.34 0) (hide yes) (effects (font (size 1 1))))
+(property "MPN" "GRM21BR71H104KA01L" (at 264.16 180.34 0) (hide yes) (effects (font (size 1 1))))
+(pin "1" (uuid "0e3d493a-06fa-47fc-b977-8b6db582b091")) (pin "2" (uuid "57559b22-8969-43cd-ba43-e78c9e02d9a2")) (instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f/cb838a63-d5e2-44ba-a4c7-99a4e5743183" (reference "C11") (unit 1)))))
+(wire (pts (xy 264.16 176.53) (xy 264.16 171.45)) (stroke (width 0) (type default)) (uuid "21830724-37e6-4aef-aeab-8f8d793eea37"))
+(label "VCC_SUP" (at 264.16 171.45 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "dc6c78f4-5ff2-4ed2-9184-b2b05ea860a1"))
+(wire (pts (xy 264.16 184.15) (xy 264.16 189.23000000000002)) (stroke (width 0) (type default)) (uuid "7fb47cb9-e623-4c1e-9976-ac579f2d33b0"))
+
+(text "U6 provides a fast wired-OR rail fault inhibit in parallel with the LTC2909 reset." (at 20.32 238.76 0) (effects (font (size 0.95 0.95)) (justify left top)) (uuid "2f45866c-b290-461e-98ef-99706ea2e3a8"))
+(text "560 ns é típico a 100 mV de overdrive; modelo SPICE local não inclui atraso. Verificar em bancada." (at 20.32 246.38 0) (effects (font (size 0.95 0.95)) (justify left top)) (uuid "01329ca3-e2f0-4ebf-b785-2a89eee8bbf5"))
+
+
+
+(symbol
+		(lib_id "power:GND")
+		(at 220.98 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d698f82d-02c2-4ab0-ac9d-d1194b2c8194")
+		(property "Reference" "#PWR045"
+			(at 220.98 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 220.98 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 220.98 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 220.98 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a114ba5f-bfc4-4893-9526-4dc89ff15cb1")
+		)
+		(instances
+			(project "hifi_audio"
+				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f/cb838a63-d5e2-44ba-a4c7-99a4e5743183"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "power:GND")
+		(at 180.34 201.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98e362d9-a52f-4e6f-9e5a-d367f01429c4")
+		(property "Reference" "#PWR046"
+			(at 180.34 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 180.34 207.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 180.34 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 180.34 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4231470b-c2a8-40be-a3a6-3519656d01e7")
+		)
+		(instances
+			(project "hifi_audio"
+				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f/cb838a63-d5e2-44ba-a4c7-99a4e5743183"
+					(reference "#PWR046")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "power:GND")
+		(at 264.16 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd2d36b6-65c3-4a45-a4bf-72b4d2cf21a2")
+		(property "Reference" "#PWR047"
+			(at 264.16 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 194.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 264.16 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "678fd6e0-ecfe-48aa-ac26-9b8da4299eaf")
+		)
+		(instances
+			(project "hifi_audio"
+				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f/cb838a63-d5e2-44ba-a4c7-99a4e5743183"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

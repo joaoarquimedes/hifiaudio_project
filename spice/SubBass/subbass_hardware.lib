@@ -48,3 +48,12 @@ BIB VDD VSS I={.5m*min(1,max(0,V(VDD,VSS)/8))}
 DCLAMP A K BAT54_APPROX
 .MODEL BAT54_APPROX D(IS=200n N=1.06 RS=2 CJO=10p BV=30 IBV=2u)
 .ENDS BAT54WS_STUDY
+
+* TLV1702 fast fault path. Static smooth threshold approximation to keep
+* convergence robust; actual 560 ns is typical at 100 mV, no guaranteed max.
+.SUBCKT TLV1702_FAST_STUDY OUT1 IN1M IN1P VSS IN2P IN2M OUT2 VCC
+BFAIL1 FAIL1 VSS V={1/(1+exp(min(40,max(-40,(V(IN1P,VSS)-V(IN1M,VSS))*1000))))}
+BFAIL2 FAIL2 VSS V={1/(1+exp(min(40,max(-40,(V(IN2P,VSS)-V(IN2M,VSS))*1000))))}
+BOUT1 OUT1 VSS I={V(OUT1,VSS)*(V(VCC,VSS)>2.2 ? V(FAIL1,VSS)/25 : 1e-12)}
+BOUT2 OUT2 VSS I={V(OUT2,VSS)*(V(VCC,VSS)>2.2 ? V(FAIL2,VSS)/25 : 1e-12)}
+.ENDS TLV1702_FAST_STUDY

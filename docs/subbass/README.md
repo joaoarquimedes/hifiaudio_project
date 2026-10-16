@@ -1,31 +1,20 @@
-# SubBass — filtros concluídos e proposta física HW1 do mute
+# SubBass — filtros e proposta de mute HW2
 
-Os filtros Sallen-Key com OPA1656 foram preservados: passa-baixas de aproximadamente 40 Hz e subsônico passa-altas de aproximadamente 10 Hz. O mute ideal EV1 foi substituído no esquema ativo por componentes reais em uma folha filha.
+Os filtros Sallen-Key com OPA1656 permanecem dimensionados para passa-baixas de aproximadamente 40 Hz e passa-altas subsônico de aproximadamente 10 Hz. A folha filha `mute_subbass.kicad_sch` inclui o supervisor LTC2909, a chave ADG5412F e um comparador TLV1702 para sinalizar falha em qualquer trilho.
 
-```text
-hifi_audio.kicad_sch
-└── subbass.kicad_sch
-    └── mute_subbass.kicad_sch — LTC2909 + ADG5412F
-```
+**Estado: proposta de circuito revisada e 25 cenários SPICE concluídos sob modelos locais; não pronta para fabricação.** O teste do comparador usa uma aproximação estática sem atraso temporal. Portanto, os picos baixos nas falhas abruptas são limites idealizados da simulação, não evidência de proteção real. O CI especifica 560 ns típicos a 100 mV de overdrive, sem máximo garantido nessa condição; o circuito ainda precisa ser caracterizado em bancada.
 
-**Avaliação atual: 26 cenários funcionais concluídos com limitações; hardware não aprovado.** As rampas são bloqueadas, mas o modelo de queda abrupta de 1 µs mostrou excursões de até 2,10 V. Esse caso requer bloqueio mais rápido ou coordenação com o estágio de saída e confirmação em bancada.
+O PCB do projeto está vazio: não há footprints, cobre, contorno ou conectores, e o DRC acusa falta de contorno. Também falta fechar a fronteira física com o estágio OPA1622, conectores e requisitos mecânicos/elétricos. A aprovação de hardware permanece negada. Não fabricar nem conectar fones com base apenas nestas simulações.
 
-A revisão física inclui os divisores e a alimentação do supervisor, clamp de entrada, chave de áudio, desacoplamento, terminação, capacitor de saída e resistor no dreno para limitar sua corrente de descarga. U4/U5 têm símbolos com pinagem real e footprints atribuídos; TP1/TP2 são pads de medição.
+- [Dimensionamento, BOM, limites e roteiro de bancada](hardware/README.md)
+- [BOM do mute](hardware/bom_mute.csv)
+- [Últimos resultados SPICE](resultados.json)
+- [Estudo ideal EV1](funcional_ev1.md), histórico; seus resultados não especificam a implementação física.
+- [Esquema atualizado do mute](hardware/esquema_mute.png) · [partida e desligamento](mute_automatico.png) · [resposta AC](resposta_ac.png) · [falhas de trilhos](falhas_trilhos.png)
 
-**Esta é uma proposta para protótipo, com modelos SPICE locais aproximados; não é aprovação de THD, ausência de estalos ou fabricação.** Os filtros continuam concluídos em nível de esquema e validação funcional. A integração com o OPA1622 fica para o módulo de saída.
-
-- [Dimensionamento, fontes e roteiro de bancada](hardware/README.md)
-- [BOM do mute, com tolerâncias e encapsulamentos](hardware/bom_mute.csv)
-- [Resultados atuais](resultados.json)
-- [Histórico do estudo ideal EV1](funcional_ev1.md), aprovado no commit 099b307; seus números não são especificações do mute físico.
-
-A proposta usa limiares nominais de +12,95 V e −12,55 V, com timeout interno de 200 ms típicos (150–260 ms). Ela substitui a histerese artificial de 1 V do estudo anterior pela filtragem e temporização do supervisor real. Com R16=680 Ω e RON modelado de 10 Ω, a perda nominal calculada é cerca de 0,58 dB com carga de 10 kΩ; essa perda precisa entrar no orçamento de ganho da integração.
-
-Para repetir a verificação sem alterar os esquemas:
+O verificador reproduz as simulações sem alterar os esquemas:
 
 ```bash
-python3 tools/verify_subbass.py --output /tmp/subbass-hw1
-uv run tools/plot_subbass.py /tmp/subbass-hw1 --output /tmp/subbass-hw1-graficos
+python3 tools/verify_subbass.py --output /tmp/subbass-hw2
+uv run tools/plot_subbass.py /tmp/subbass-hw2 --output /tmp/subbass-hw2-graficos
 ```
-
-Os artefatos e a conclusão numérica são atualizados após uma execução completa. O relatório de hardware explica a cobertura e as limitações dos modelos. As fontes nominais do KiCad são preservadas; o verificador gera os estímulos de falha nas netlists de teste.

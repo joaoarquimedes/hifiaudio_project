@@ -27,7 +27,7 @@ def load(name):
 plt.rcParams.update({'font.size':10})
 fig,ax=plt.subplots(5,1,figsize=(12,12),sharex=True,layout='constrained')
 d=load('startup_shutdown');t=[x*1000 for x in d['time']]
-fig.suptitle('SubBass — mute automático com supervisão dos dois trilhos\nProposta HW1, sem aprovação física · modelos locais · ngspice / Gear',fontsize=14)
+fig.suptitle('SubBass — mute automático com supervisão dos dois trilhos\nHW2: modelos locais; comparador sem atraso temporal · não aprovado para fabricação',fontsize=14)
 ax[0].plot(t,d['vp'],label='+V');ax[0].plot(t,d['vn'],label='−V');ax[0].set_ylabel('Trilhos (V)')
 ax[1].plot(t,d['adj_pos'],label='ADJ1 (+V)');ax[1].plot(t,d['adj_neg'],label='ADJ2 (−V)');ax[1].axhline(.5,color='#777',ls=':',label='Limiar nominal 0,5 V');ax[1].set_ylabel('Sensores (V)')
 ax[2].plot(t,d['ctrl'],label='CTRL_PASSA / RST',color='#b28400');ax[2].set_ylabel('Controle (V)')

@@ -1,42 +1,42 @@
-# SubBass HW1 — proposta física do mute
+# SubBass HW2 — proposta de mute e estado de fabricação
 
-16/10/2026. Esta revisão transforma o bloco ideal em uma proposta montável com componentes reais. Os macromodelos novos são aproximações locais baseadas nas funções documentadas; não são modelos oficiais nem homologação do circuito físico.
+16/10/2026. Esta revisão acrescenta o comparador U6 para detectar rapidamente o colapso de qualquer trilho. Os resultados abaixo são de modelos locais em ngspice; não equivalem a modelos oficiais completos nem à validação do circuito físico.
 
 ## Resultado da avaliação
 
-**26 cenários funcionais completaram, mas a proposta não está aprovada como mute físico definitivo.** Os testes de detecção/temporização, corrente, carga e resposta foram satisfeitos dentro dos modelos locais. A condição de queda abrupta mostrou uma limitação de proteção que precisa ser resolvida ou delimitada na integração antes de aprovar fabricação.
+**25 cenários SPICE concluíram com `FUNCTIONAL_PASS_WITH_LIMITATIONS`; isso não aprova o hardware para fabricação.** O circuito lógico passou pelos critérios funcionais codificados, mas a modelagem da resposta temporal do novo comparador é idealizada. A placa KiCad continua vazia e não tem contorno; DRC reporta `invalid_outline`.
 
 | Ensaio | Resultado no modelo atual |
 |---|---|
-| Rampas simultâneas de 10 ms | Libera em 309,126 ms; bloqueia em 611,864 ms |
-| Partida, após mute | Pico absoluto de ~51,95 µV, com vazamento modelado |
-| Desligamento, após mute (615–650 ms) | Pico absoluto de ~66,95 µV |
+| Rampas simultâneas de 10 ms | Libera em 309,133 ms; bloqueia em 611,270 ms |
+| Partida, após mute | Pico absoluto de ~51,95 µV |
+| Desligamento, após mute (615–650 ms) | Pico absoluto de ~59,54 µV |
 | Áudio nominal, após mute | 2,491762 Vp em 20 Hz para entrada de 2,828 Vp |
 | Pacote de carga imposto ±680 pC | Excursões de aproximadamente −6,36 mV / +7,24 mV |
 | Corner de 50 nA, RON=16,5 Ω e acoplamento 13 pF | Maior saída com entrada zero de ~0,549 mV |
-| Queda de +V em 1 µs durante áudio | Pico de −2,102 V no primeiro intervalo de 0,8 ms |
-| Queda de −V em 1 µs durante áudio | Pico de +1,765 V no mesmo intervalo |
-| Maior corrente calculada em R16 nas duas quedas abruptas | ~4,17 mA / ~3,56 mA, abaixo de 30 mA |
+| Pico na saída logo após a falha abrupta de +V / −V | 25,738 mV / 25,929 mV no modelo sem atraso temporal |
+| Corrente máxima em R16 no mesmo ensaio | 3,634 mA nos dois casos modelados |
 
-As últimas duas excursões incluem o intervalo de detecção e a dinâmica do capacitor de saída; não são necessariamente picos anteriores à queda de CTRL_PASSA. Também ocorrem com o OPA1656 fora da alimentação normal, onde seu macromodelo é exploratório. **Não podem ser descartadas nem tratadas como amplitude real garantida.** É necessário avaliar um bloqueio mais rápido/coordenado com a habilitação do estágio de saída e confirmar em bancada. Não conectar o sistema a fones supondo que este mute já foi aprovado contra qualquer colapso abrupto.
+**Limite crucial:** o subcircuito `TLV1702_FAST_STUDY` é uma função estática suave de limiar, sem atraso de propagação. Foi usado porque a simulação temporal com o modelo OPA1656 não convergiu de forma robusta com as versões dinâmicas tentadas. Assim, as excursões de ~26 mV representam uma hipótese ideal de desligamento instantâneo; não demonstram que o comparador real cortará o áudio nesse nível. O datasheet da TI informa 560 ns típicos a 100 mV de overdrive, sem máximo garantido nessa condição. O atraso na amplitude real de falha, no circuito e com variação de processo/temperatura, ainda precisa de análise conservadora e medida em bancada.
 
-A aprovação dos 26 critérios funcionais não é uma aprovação de ausência de estalos, de THD ou de proteção final dos fones. O JSON usa `FUNCTIONAL_PASS_WITH_LIMITATIONS` e mantém a aprovação de hardware explicitamente negada. Os resultados antigos de 11 µV pertencem à chave ideal EV1.
+O resultado de HW1 com supervisor apenas previa excursões de −2,102 V / +1,765 V em ensaio semelhante. Isso motivou U6; não deve ser comparado como prova quantitativa de melhoria, porque os dois resultados usam modelos diferentes. O OPA1656 fora da alimentação normal também torna esses transitórios exploratórios. Não conectar fones supondo proteção contra colapso abrupto.
 
-ERC atual: zero ocorrências com as regras do projeto. A verificação adicional com modelos SPICE habilitados também não apresentou erros; os avisos remanescentes referem-se a footprints antigos fora desta proposta. Os footprints dos 16 componentes novos/especificados no mute foram conferidos no pacote KiCad instalado.
+ERC do esquemático: zero ocorrências com as regras do projeto. A lista de posições compradas aumentou para 20. Alguns novos itens têm MPN definido, mas os passivos originais R8–R16 e C7–C10 ainda não têm código comercial fechado. Portanto, BOM e footprints continuam precisando de conferência com itens efetivamente comprados. A placa `hifi_audio.kicad_pcb` não contém footprints, trilhas, zonas ou `Edge.Cuts`; DRC falha por falta de contorno.
 
 ## Componentes e folha
 
-A folha `subbass.kicad_sch` mantém U1A/U1B e as redes dos filtros. Sua filha `mute_subbass.kicad_sch` contém o mute:
+A folha `subbass.kicad_sch` mantém U1A/U1B e as redes dos filtros. Sua filha `mute_subbass.kicad_sch` contém o mute e o corte rápido de falha:
 
 - U4: **LTC2909ITS8-2.5#TRMPBF**, TSOT-23-8, com referência interna e supervisão positiva/negativa.
 - U5: **ADG5412FBRUZ**, TSSOP-16, usando o canal 1 em série. A entrada protegida S1 recebe o sinal de U1B; o dreno D1 entrega o sinal a R16. Os três canais restantes ficam desativados e aterrados; FF fica aberto.
-- R9/C7 alimentam o supervisor pelo shunt interno. R10/R11 observam +V; R12/R13 deslocam a leitura de −V com a referência de 1 V. D1 externo protege essa entrada quando +V está ausente.
+- U6: **TLV1702AIDGKR**, VSSOP-8. Compara os sensores dos trilhos com metade da referência e conecta as saídas open-collector em wired-OR com RST de U4. O circuito pretende remover CTRL_PASSA sem aguardar o timer de partida. A resposta dinâmica ainda não foi qualificada.
+- R17/R18 criam metade de REF; C11 desacopla U6. R9/C7 alimentam o supervisor pelo shunt interno. R10/R11 observam +V; R12/R13 deslocam a leitura de −V com a referência de 1 V. D1 externo protege essa entrada quando +V está ausente.
 - R14 puxa o reset para a própria alimentação de U4. R15 mantém o controle baixo sem energia.
 - R16=680 Ω, **no dreno**, isola C10 e limita o retorno de corrente quando um trilho desaparece. C10=100 nF reduz o degrau produzido por uma carga injetada na saída. R8=10 kΩ mantém uma carga/descarga definida.
 
 A pinagem dos símbolos segue os encapsulamentos citados, não as versões DFN/LFCSP. O terra do modelo SPICE se chama ZREF para evitar colisão com o nó global reservado `GND` do modo de compatibilidade. Isso não altera os pinos físicos de terra.
 
-BOM: [CSV](bom_mute.csv) e [JSON](bom_mute.json), com 16 posições compradas. Os passivos são especificados por valor, tolerância, potência/tensão, dielétrico e encapsulamento; seus códigos comerciais ainda devem ser escolhidos conforme disponibilidade. Os códigos dos CIs e do diodo estão definidos. TP1/TP2 são pads de medição e não entram na lista de componentes comprados.
+BOM: [CSV](bom_mute.csv) e [JSON](bom_mute.json), com 20 posições compradas e TP1/TP2 como pads de teste fora da contagem. Os códigos de U4/U5/U6 e D1 estão definidos. Os MPNs para R8–R16 e C7–C10 ainda devem ser escolhidos e verificados contra disponibilidade, tolerância, potência, tensão e encapsulamento antes de liberar compras/montagem.
 
 ## Dimensionamento próprio
 
@@ -70,7 +70,7 @@ C10 com a resistência série introduz um polo acima de 2 kHz com carga nominal,
 
 - SEL de U4 fica **aberto**; TMR fica em GND. A liberação usa o timeout interno nominal de 200 ms, com faixa de 150–260 ms.
 - Este modo não conserva a histerese artificial de 1 V do estudo EV1. Usa os limiares dos divisores, a filtragem do supervisor e a necessidade de novo timeout após uma falha.
-- O reset é open-drain: controle alto permite áudio; controle baixo bloqueia. A queda não é instantânea. O modelo usa 500 µs de atraso de detecção e não reproduz a dependência real do filtro com a amplitude do defeito.
+- O reset é open-drain: controle alto permite áudio; controle baixo bloqueia. U6 adiciona um caminho lógico rápido, mas seu macromodelo atual não inclui propagação temporal. Não há conclusão quantitativa válida sobre o tempo real de corte.
 - A chave real tem RON e vazamento. Portanto, os números de 1 Ω, 1 GΩ e 11 µV da revisão ideal não são especificações desta implementação física.
 - A chave possui proteção no lado **Sx**. Os drenos não têm a mesma proteção; a posição de R16 depois de D1 do CI foi escolhida para limitar a descarga de C10 pelos clamps internos durante uma queda abrupta.
 
@@ -91,11 +91,11 @@ Os testes não qualificam inversão da alimentação, sobretensões fora da faix
 Na raiz do repositório:
 
 ```bash
-python3 tools/verify_subbass.py --output /tmp/subbass-hw1
-uv run tools/plot_subbass.py /tmp/subbass-hw1 --output /tmp/subbass-hw1-graficos
+python3 tools/verify_subbass.py --output /tmp/subbass-hw2
+uv run tools/plot_subbass.py /tmp/subbass-hw2 --output /tmp/subbass-hw2-graficos
 ```
 
-Usa KiCad CLI, Python padrão e a biblioteca ngspice do KiCad, ou o caminho indicado por `NGSPICE_LIBRARY`. O simulador é configurado em Gear. Os casos que exigem refinamento usam passo máximo de 10 µs; os demais usam 20 µs. Logs, CSV e netlists permitem auditar também falhas de convergência. Uma execução interrompida não conta como aprovação.
+Usa KiCad CLI, Python padrão e a biblioteca ngspice do KiCad, ou o caminho indicado por `NGSPICE_LIBRARY`. O simulador é configurado em Gear. Os casos comuns usam passo máximo de 20 µs; as falhas de trilho usam 50 µs para manter convergência. Esses passos não validam o atraso do comparador, ausente no modelo. Logs, CSV e netlists permitem auditar também falhas de convergência. Uma execução interrompida não conta como aprovação.
 
 No KiCad, as fontes permanecem nominais em DC ±15 V e senoide de 20 Hz. Para observar uma partida, use os estímulos pulsados documentados ou o verificador; o ponto de operação DC já representa o sistema energizado. O workbook mantém controle e saídas acessíveis.
 
@@ -116,4 +116,4 @@ No KiCad, as fontes permanecem nominais em DC ±15 V e senoide de 20 Hz. Para ob
 - [ADG5412F — página oficial](https://www.analog.com/en/products/adg5412f.html) e [datasheet, Rev. C](https://www.analog.com/media/en/technical-documentation/data-sheets/ADG5412F_5413F.pdf): pinagem TSSOP, proteção do source, limites do drain, RON e carga injetada.
 - [BAT54WS — Diodes Incorporated](https://www.diodes.com/datasheet/download/BAT54WS.pdf): encapsulamento, polaridade e características do clamp.
 
-A proposta tem componentes, valores, interfaces e critérios de teste definidos. **A aprovação física permanece dependente dessas medições**, em especial distorção, estalos e clamp em temperatura.
+O esquema tem valores e critérios de teste definidos, mas ainda não há interfaces físicas completas nem PCB. Para fabricação, faltam definir se a placa inclui OPA1622, conectores e pinagem, requisitos de sinal/carga, envelope e fixação mecânicos, MPNs de todos os passivos, modelo temporal conservador, medições de bancada (transientes, THD+N, ruído e temperatura), roteamento, DRC aprovado e arquivos Gerber/fabricação.

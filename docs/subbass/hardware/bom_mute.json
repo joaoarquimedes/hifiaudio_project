@@ -10,7 +10,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Desacoplamento",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "C8",
@@ -23,7 +23,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Desacoplamento",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "C9",
@@ -36,7 +36,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Desacoplamento",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "C10",
@@ -49,7 +49,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Limita degrau por injeção de carga; validar em bancada",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "D1",
@@ -62,7 +62,7 @@
     "MPN": "BAT54WS-7-F",
     "Datasheet": "https://www.diodes.com/datasheet/download/BAT54WS.pdf",
     "Description": "Clamp de ADJ_NEG quando +V está ausente",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R8",
@@ -75,7 +75,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Carga/bleed de saída do módulo",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R9",
@@ -88,7 +88,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Limita corrente do shunt interno de U4",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R10",
@@ -101,7 +101,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Divisor de supervisão",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R11",
@@ -114,7 +114,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Divisor de supervisão",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R12",
@@ -127,7 +127,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Divisor de supervisão",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R13",
@@ -140,7 +140,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Divisor de supervisão",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R14",
@@ -153,7 +153,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Pull-up do reset para o próprio VCC de U4",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R15",
@@ -166,7 +166,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Estado bloqueado sem alimentação",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "R16",
@@ -179,7 +179,7 @@
     "MPN": "",
     "Datasheet": "",
     "Description": "Limita corrente de dreno e isola C10; exigir capacidade de pulso >=15uJ",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "U4",
@@ -192,7 +192,7 @@
     "MPN": "LTC2909ITS8-2.5#TRMPBF",
     "Datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/2909fb.pdf",
     "Description": "Supervisor +UV/-UV; SEL aberto; TMR em GND",
-    "Quantity": 1
+    "Quantity": "1"
   },
   {
     "Reference": "U5",
@@ -205,6 +205,58 @@
     "MPN": "ADG5412FBRUZ",
     "Datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG5412F_5413F.pdf",
     "Description": "Chave analógica protegida; canal 1 em série; canais 2/3/4 desativados",
-    "Quantity": 1
+    "Quantity": "1"
+  },
+  {
+    "Reference": "C11",
+    "Value": "100n",
+    "Tolerance": "10%",
+    "Power": "",
+    "Voltage": "50V",
+    "Dielectric": "X7R",
+    "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "MPN": "GRM21BR71H104KA01L",
+    "Datasheet": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR71H104KA01L",
+    "Description": "Desacoplamento U6",
+    "Quantity": "1"
+  },
+  {
+    "Reference": "R17",
+    "Value": "10k",
+    "Tolerance": "1%",
+    "Power": "0.125W",
+    "Voltage": "",
+    "Dielectric": "",
+    "Footprint": "Resistor_SMD:R_0805_2012Metric",
+    "MPN": "CRCW080510K0FKEA",
+    "Datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "Description": "Divisor VREF_1V/2 para comparador rápido",
+    "Quantity": "1"
+  },
+  {
+    "Reference": "R18",
+    "Value": "10k",
+    "Tolerance": "1%",
+    "Power": "0.125W",
+    "Voltage": "",
+    "Dielectric": "",
+    "Footprint": "Resistor_SMD:R_0805_2012Metric",
+    "MPN": "CRCW080510K0FKEA",
+    "Datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "Description": "Divisor VREF_1V/2 para comparador rápido",
+    "Quantity": "1"
+  },
+  {
+    "Reference": "U6",
+    "Value": "TLV1702AIDGKR",
+    "Tolerance": "",
+    "Power": "",
+    "Voltage": "",
+    "Dielectric": "",
+    "Footprint": "Package_SO:VSSOP-8_2.3x2mm_P0.5mm",
+    "MPN": "TLV1702AIDGKR",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/tlv1702.pdf",
+    "Description": "Inibição rápida wired-OR dos trilhos; propagação típica 560ns",
+    "Quantity": "1"
   }
 ]
