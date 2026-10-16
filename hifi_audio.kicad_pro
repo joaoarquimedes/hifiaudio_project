@@ -673,7 +673,7 @@
         "uuid": "cacffc98-2318-42a9-a4e2-e2aa2b951373"
       }
     ],
-    "used_designators": "#FLG1-3,#PWR1-17,C1-6,J1,L1,R1-8,S1,TP1-2,U1-4,V1-3",
+    "used_designators": "#FLG1-4,#PWR1-44,C1-10,D1,J1,L1,R1-16,TP1-2,U1-5,V1-3",
     "variants": []
   },
   "sheets": [
@@ -692,6 +692,10 @@
     [
       "ad6bf775-41d3-4b77-b1e8-7e04674efb8f",
       "subbass"
+    ],
+    [
+      "cb838a63-d5e2-44ba-a4c7-99a4e5743183",
+      "Mute_SubBass"
     ]
   ],
   "text_variables": {},

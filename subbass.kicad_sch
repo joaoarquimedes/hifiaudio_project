@@ -1773,13 +1773,12 @@
 (property "Reference" "TP" (at 0 4.064 0) (effects (font (size 1 1))))
 (property "Value" "SIM_TESTPOINT" (at 0 6.35 0) (hide yes) (effects (font (size 1 1))))
 (symbol "SIM_TESTPOINT_0_1" (circle (center 0 1.27) (radius 0.635) (stroke (width 0.1524) (type default)) (fill (type none))))
-(symbol "SIM_TESTPOINT_1_1" (pin passive line (at 0 0 90) (length 0.635) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))))))
-	(junction
-		(at 208.28 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1ad190de-1619-4919-9465-be43bd1ec94e")
-	)
+(symbol "SIM_TESTPOINT_1_1" (pin passive line (at 0 0 90) (length 0.635) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))(symbol "Audio_HiFi:TESTPOINT" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (exclude_from_sim yes) (in_bom no) (on_board yes)
+(property "Reference" "TP" (at 0 4.064 0) (effects (font (size 1 1))))
+(property "Value" "TESTPOINT" (at 0 6.35 0) (hide yes) (effects (font (size 1 1))))
+(symbol "TESTPOINT_0_1" (circle (center 0 1.27) (radius 0.635) (stroke (width 0.1524) (type default)) (fill (type none))))
+(symbol "TESTPOINT_1_1" (pin passive line (at 0 0 90) (length 0.635) (name "1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))))))
+
 	(junction
 		(at 132.08 165.1)
 		(diameter 0)
@@ -1792,12 +1791,7 @@
 		(color 0 0 0 0)
 		(uuid "2b0068dd-5640-4df5-ab10-a36cb9be2275")
 	)
-	(junction
-		(at 217.17 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "32a34ac4-7ce6-440c-8219-adc1c69136c3")
-	)
+
 	(junction
 		(at 154.94 149.86)
 		(diameter 0)
@@ -1810,12 +1804,7 @@
 		(color 0 0 0 0)
 		(uuid "5819bc80-d0bf-4057-b797-91d060ede66f")
 	)
-	(junction
-		(at 213.36 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "728947f8-ff50-406c-96ab-419f639deca2")
-	)
+
 	(junction
 		(at 147.32 176.53)
 		(diameter 0)
@@ -1834,12 +1823,7 @@
 		(color 0 0 0 0)
 		(uuid "90d94749-96c1-450a-898a-42b1719aedd5")
 	)
-	(junction
-		(at 212.09 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9d9e1dee-040f-449b-aa18-050a29d24bf9")
-	)
+
 	(junction
 		(at 44.45 95.25)
 		(diameter 0)
@@ -1882,12 +1866,7 @@
 		(color 0 0 0 0)
 		(uuid "de0952e2-5645-4bfd-84e6-0b24dcbb9e5d")
 	)
-	(junction
-		(at 212.09 91.44)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e688b6ca-fe67-4a72-abd2-c39cd575e42e")
-	)
+
 	(junction
 		(at 76.2 95.25)
 		(diameter 0)
@@ -1936,16 +1915,7 @@
 		)
 		(uuid "0d4180fa-955c-4f90-a2a0-6cdc03809060")
 	)
-	(wire
-		(pts
-			(xy 217.17 78.74) (xy 222.25 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11771b5b-071b-4856-817c-051cf0fd0306")
-	)
+
 	(wire
 		(pts
 			(xy 111.76 113.03) (xy 111.76 97.79)
@@ -1996,16 +1966,7 @@
 		)
 		(uuid "1b5fdee1-9624-43b0-96c9-d47769f05021")
 	)
-	(wire
-		(pts
-			(xy 217.17 91.44) (xy 213.36 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "207d2e51-c362-4a36-838c-3eefc561a69d")
-	)
+
 	(wire
 		(pts
 			(xy 180.34 96.52) (xy 187.96 96.52)
@@ -2086,16 +2047,7 @@
 		)
 		(uuid "44ecc9fb-4c87-4bdb-b480-25264886efde")
 	)
-	(wire
-		(pts
-			(xy 217.17 81.28) (xy 217.17 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46a5b8fa-4700-4d0d-9c9b-95819ac77aab")
-	)
+
 	(wire
 		(pts
 			(xy 60.96 95.25) (xy 66.04 95.25)
@@ -2217,26 +2169,8 @@
 		)
 		(uuid "6db85d36-f127-444e-a650-0430c30874af")
 	)
-	(wire
-		(pts
-			(xy 212.09 93.98) (xy 212.09 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6de22e20-6db3-4cab-871f-0ca06a6ea4cf")
-	)
-	(wire
-		(pts
-			(xy 208.28 81.28) (xy 208.28 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e5c59f7-e05f-4cb9-ab06-6427fcd781cb")
-	)
+
+
 	(wire
 		(pts
 			(xy 44.45 95.25) (xy 48.26 95.25)
@@ -2278,16 +2212,7 @@
 		(uuid "70866604-c3f1-47a7-b523-61253bd797c7")
 	)
 
-	(wire
-		(pts
-			(xy 212.09 81.28) (xy 208.28 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "75cb747d-c71d-4433-ba5f-817c2df54c19")
-	)
+
 	(wire
 		(pts
 			(xy 76.2 95.25) (xy 88.9 95.25)
@@ -2398,16 +2323,7 @@
 		)
 		(uuid "9990eeb5-b9d3-43d1-a085-1f7b9395b6af")
 	)
-	(wire
-		(pts
-			(xy 217.17 78.74) (xy 217.17 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f092074-d41e-4b2c-b396-25cb7f0d9581")
-	)
+
 	(wire
 		(pts
 			(xy 73.66 95.25) (xy 76.2 95.25)
@@ -2418,16 +2334,7 @@
 		)
 		(uuid "a5c80108-21c5-4612-89fe-8428646c9765")
 	)
-	(wire
-		(pts
-			(xy 222.25 93.98) (xy 212.09 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a85582c4-b851-4f1f-944c-c802946d68cd")
-	)
+
 	(wire
 		(pts
 			(xy 193.04 101.6) (xy 193.04 106.68)
@@ -2458,16 +2365,7 @@
 		)
 		(uuid "acf96fff-2476-44ea-a56a-f140ae3ccd5a")
 	)
-	(wire
-		(pts
-			(xy 213.36 91.44) (xy 213.36 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b059b7b7-d288-406e-b39b-740e04268df4")
-	)
+
 	(wire
 		(pts
 			(xy 137.16 165.1) (xy 137.16 149.86)
@@ -2479,16 +2377,7 @@
 		(uuid "b5aac5b9-2f05-4577-9ede-ced61e15783f")
 	)
 
-	(wire
-		(pts
-			(xy 212.09 66.04) (xy 212.09 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2548210-c53f-499f-a345-9cd206fec40c")
-	)
+
 	(wire
 		(pts
 			(xy 88.9 100.33) (xy 83.82 100.33)
@@ -2499,16 +2388,7 @@
 		)
 		(uuid "c73d5857-0a64-42cb-a6b0-ca91ab06e139")
 	)
-	(wire
-		(pts
-			(xy 217.17 77.47) (xy 212.09 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7fed314-407c-48bc-b20b-8b84b493dbab")
-	)
+
 	(wire
 		(pts
 			(xy 132.08 165.1) (xy 137.16 165.1)
@@ -2599,26 +2479,8 @@
 		)
 		(uuid "f96a1c3f-433c-4f1a-9441-d22298ee7b7c")
 	)
-	(wire
-		(pts
-			(xy 208.28 68.58) (xy 212.09 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa9687c6-3082-4b5e-875d-abbbd5837939")
-	)
-	(wire
-		(pts
-			(xy 212.09 68.58) (xy 212.09 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "faaa8cf1-a759-424f-9adb-dd6a4776ef72")
-	)
+
+
 	(wire
 		(pts
 			(xy 111.76 82.55) (xy 111.76 97.79)
@@ -2649,16 +2511,7 @@
 		)
 		(uuid "30774669-070e-47c6-9bd1-3fd3f7feed97")
 	)
-	(label "VOUT_SUB_MUTE"
-		(at 222.25 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3cb90cb7-226d-424c-8d3d-0eb1e5ab5820")
-	)
+
 	(label "VIN_SUB"
 		(at 40.64 87.63 180)
 		(effects
@@ -2669,16 +2522,7 @@
 		)
 		(uuid "8386aa2f-dda1-4b7f-9a17-96d0d563e940")
 	)
-	(label "CTRL_PASSA"
-		(at 222.25 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b6ce3e2d-93b4-4b65-9bd0-6ea82b6e8337")
-	)
+
 	(label "VOUT_SUB"
 		(at 123.19 88.9 0)
 		(effects
@@ -3542,84 +3386,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 212.09 66.04 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7e5c9f0c-34dc-4654-9364-7a4530d6c7ae")
-		(property "Reference" "#PWR014"
-			(at 212.09 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 212.09 60.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 212.09 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 212.09 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 212.09 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "725e0409-ec88-4050-900d-681048236656")
-		)
-		(instances
-			(project "hifi_audio"
-				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f"
-					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "Device:R")
 		(at 160.02 171.45 0)
@@ -4536,88 +4303,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Device:R")
-		(at 212.09 73.66 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eb1bd294-fa2c-44bf-bf9d-dfe1009071ad")
-		(property "Reference" "R8"
-			(at 214.63 72.3899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 214.63 74.9299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 210.312 73.66 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 212.09 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 212.09 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5a697894-3d7c-445a-bead-2f9caa200d8b")
-		)
-		(pin "2"
-			(uuid "b25d6c5a-f478-4e8e-860d-0038740b7137")
-		)
-		(instances
-			(project "hifi_audio"
-				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "power:-VDC")
 		(at 160.02 165.1 0)
@@ -4696,111 +4382,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Simulation_SPICE:SWITCH")
-		(at 217.17 86.36 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f34ef03b-ddb1-4316-9b7d-c4f9f2ac5db4")
-		(property "Reference" "S1"
-			(at 219.71 89.0271 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MUTE_SERIES_IDEAL"
-			(at 219.71 86.4871 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 217.17 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Switches"
-			(at 217.17 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Voltage controlled switch symbol for simulation only"
-			(at 217.17 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 217.17 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 
-
-
-		(pin "2"
-			(uuid "22267a7c-8470-4f9e-a6af-fd40c12cd606")
-		)
-		(pin "3"
-			(uuid "279c8de8-d15a-4f0b-8a05-181730631635")
-		)
-		(pin "4"
-			(uuid "5769c420-3bd5-42af-a76b-0dc349a3f64d")
-		)
-		(pin "1"
-			(uuid "ceca8d1c-7c1a-4780-9c49-8c9847706f58")
-		)
-		(instances
-			(project "hifi_audio"
-				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f"
-					(reference "S1")
-					(unit 1)
-				)
-			)
-		)
-	(property "Sim.Library" "spice/SubBass/subbass_mute.lib" (at 217.17 86.36 0) (hide yes) (effects (font (size 1 1))))
-(property "Sim.Name" "SUBBASS_MUTE_SWITCH" (at 217.17 86.36 0) (hide yes) (effects (font (size 1 1))))
-(property "Sim.Pins" "1=IN 2=OUT 3=CTRL 4=GND" (at 217.17 86.36 0) (hide yes) (effects (font (size 1 1))))
-)
 	(symbol
 		(lib_id "Device:C")
 		(at 176.53 96.52 90)
@@ -4960,283 +4542,50 @@
 		)
 	)
 
-	(symbol (lib_id "Audio_HiFi:SUBBASS_MUTE_CTRL") (at 228.6 138.43 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "c1b5338f-c962-4fd0-81c9-3b61b1106d1d")
-(property "Reference" "U4" (at 228.6 124.46 0) (effects (font (size 1 1))))
-(property "Value" "SUBBASS_MUTE_CTRL" (at 228.6 127 0) (effects (font (size 1 1))))
-(property "Description" "MODELO FUNCIONAL SPICE; implementação física pendente" (at 228.6 138.43 0) (hide yes) (effects (font (size 1 1))))
-(property "Footprint" "" (at 228.6 138.43 0) (hide yes) (effects (font (size 1 1))))
-(property "Sim.Library" "spice/SubBass/subbass_mute.lib" (at 228.6 138.43 0) (hide yes) (effects (font (size 1 1))))
-(property "Sim.Name" "SUBBASS_MUTE_CTRL" (at 228.6 138.43 0) (hide yes) (effects (font (size 1 1))))
-(property "Sim.Device" "SUBCKT" (at 228.6 138.43 0) (hide yes) (effects (font (size 1 1))))
-(property "Sim.Pins" "1=VP 2=VN 3=GND 4=CTRL 5=RAIL_OK 6=TIMER" (at 228.6 138.43 0) (hide yes) (effects (font (size 1 1))))
-(pin "1" (uuid "19c36a43-78fa-43be-9d0b-27b2910903c8")) (pin "2" (uuid "1473d63c-037e-4043-a968-c59066950579")) (pin "3" (uuid "6be8edc2-cadf-4840-97c7-c929d7f48d4d")) (pin "4" (uuid "77132bef-7235-403b-81fd-4b6406bcf621")) (pin "5" (uuid "d4ae8612-bae9-4aec-8ab2-809fb65b1f0d")) (pin "6" (uuid "b81f85c0-eda4-44f8-8235-68556a25805a"))
-(instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "U4") (unit 1)))))
-	(wire (pts (xy 203.2 133.35) (xy 210.82 133.35)) (stroke (width 0) (type default)) (uuid "78a6e737-795a-4ade-a5c9-d20c4211fb37"))
 
-	(wire (pts (xy 203.2 138.43) (xy 210.82 138.43)) (stroke (width 0) (type default)) (uuid "84eb9dd4-b826-4110-8887-6b589e7d606d"))
 
-	(wire (pts (xy 203.2 143.51) (xy 210.82 143.51)) (stroke (width 0) (type default)) (uuid "84b4b8d6-87ed-4c74-a931-434797315d8b"))
 
-	(wire (pts (xy 246.38 133.35) (xy 254 133.35)) (stroke (width 0) (type default)) (uuid "a84e7ebf-c69a-43ca-b667-731c63f1ff1e"))
-	(label "CTRL_PASSA" (at 254 133.35 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "d1a21c66-bfe5-4df9-aed7-abac82a5e059"))
-	(wire (pts (xy 246.38 138.43) (xy 251.46 138.43)) (stroke (width 0) (type default)) (uuid "4fe46c44-7447-40fc-87b5-32475c7d8662"))
-	(label "RAIL_OK" (at 254 138.43 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "7dccc0ce-f221-47cf-8ca3-67021d32aed3"))
-	(wire (pts (xy 246.38 143.51) (xy 251.46 143.51)) (stroke (width 0) (type default)) (uuid "29098ffd-7d40-486c-b5a1-f77a69717e24"))
-	(label "MUTE_TIMER" (at 254 143.51 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "a5015709-f9d1-4e4a-b6d7-35de4c56f0a3"))
+
+
+
+
+
+
+
+
+
+
 	(text "SUBBASS — ESTUDO FUNCIONAL / SPICE" (at 30.48 25.4 0) (effects (font (size 1.8 1.8)) (justify left top)) (uuid "93cd4c87-aa95-4672-91b6-f44f38ae46e4"))
 	(text "Passa-baixas 40 Hz + subsônico 10 Hz | OPA1656 | ±15 V" (at 30.48 33.02 0) (effects (font (size 1.2 1.2)) (justify left top)) (uuid "143b056e-9281-4ff5-8d6d-6b5997bc301d"))
-	(text "MUTE AUTOMÁTICO: S1 passa áudio somente com CTRL_PASSA alto." (at 30.48 43.18 0) (effects (font (size 1 1)) (justify left top)) (uuid "591d721f-b699-4c90-ba8f-c25f2142fb7d"))
-	(text "S1 e U4 são modelos de estudo, excluídos da PCB e da BOM. Não representam hardware final." (at 30.48 48.26 0) (effects (font (size 1 1)) (justify left top)) (uuid "2628d158-eeda-46db-827d-28bb48787834"))
+
+
 	(text "U1A: passa-baixas ~40 Hz" (at 40.64 62.23 0) (effects (font (size 1.2 1.2)) (justify left top)) (uuid "39ad07e8-ad07-474a-a6e7-7ed04d89d0f1"))
 	(text "U1B: passa-altas ~10 Hz" (at 160.02 116.84 0) (effects (font (size 1.2 1.2)) (justify left top)) (uuid "c90d85a0-d168-434c-a1db-47c3656a1f14"))
-	(text "Supervisor dos dois trilhos (modelo funcional)" (at 190.5 119.38 0) (effects (font (size 1.1 1.1)) (justify left top)) (uuid "4a05488a-be7a-45f3-a51e-307c1d863c64"))
-	(text "Libera: ambos >13 V em módulo por ~200 ms.\nBloqueia: qualquer trilho <12 V em módulo.\nHisterese 1 V; reinicia atraso após falha.\nCTRL: 0 V=bloqueio / 5 V=passagem." (at 190.5 153.67 0) (effects (font (size 0.95 0.95)) (justify left top)) (uuid "b3c05913-72bc-49b3-9dd1-0463ba3e1672"))
+
+
 	(text ".options method=gear" (at 30.48 185.42 0) (effects (font (size 1 1)) (justify left top)) (uuid "aa42037a-f036-4329-983b-33d4804e92b0"))
 	(text "TRAN: .tran 100u 1 0 20u (passo reduzido para convergência do macromodelo)." (at 30.48 190.5 0) (effects (font (size 0.95 0.95)) (justify left top)) (uuid "267e1358-8d8c-4836-af3d-19a5c0a8654c"))
-(symbol (lib_id "Audio_HiFi:SIM_TESTPOINT") (at 251.46 138.43 0) (unit 1) (exclude_from_sim yes) (in_bom no) (on_board no) (dnp no) (uuid "8a2a85cc-ce90-4847-a0f1-b15ae6d85e0e")
-(property "Reference" "TP1" (at 251.46 135.89 0) (effects (font (size 1 1))))
-(property "Value" "SIM_TESTPOINT" (at 251.46 138.43 0) (hide yes) (effects (font (size 1 1))))
-(pin "1" (uuid "17cd99e8-2b44-4547-9410-38471dfabeee"))
-(instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "TP1") (unit 1)))))
-(symbol (lib_id "Audio_HiFi:SIM_TESTPOINT") (at 251.46 143.51 0) (unit 1) (exclude_from_sim yes) (in_bom no) (on_board no) (dnp no) (uuid "7ccc5769-4419-4bc2-9223-0905554604d7")
-(property "Reference" "TP2" (at 251.46 140.97 0) (effects (font (size 1 1))))
-(property "Value" "SIM_TESTPOINT" (at 251.46 143.51 0) (hide yes) (effects (font (size 1 1))))
-(pin "1" (uuid "aaa37e5a-bcc2-4ecc-baa4-ed5bbb0465d4"))
-(instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "TP2") (unit 1)))))
-(wire (pts (xy 251.46 138.43) (xy 254 138.43)) (stroke (width 0) (type default)) (uuid "622e3e34-3806-4d95-bf7f-3c84c20846cc"))
-(wire (pts (xy 251.46 143.51) (xy 254 143.51)) (stroke (width 0) (type default)) (uuid "e12f545c-2366-4ee4-9c85-949f4ebdbd2b"))
-(symbol
-		(lib_id "power:+VDC")
-		(at 203.2 133.35 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3e187ef1-92a9-43c6-8808-943b8dbea6f2")
-		(property "Reference" "#PWR015"
-			(at 203.2 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+V"
-			(at 198.12 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+VDC\""
-			(at 203.2 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b9799d79-467a-438f-86e9-f8702460f495")
-		)
-		(instances
-			(project "hifi_audio"
-				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-(symbol
-		(lib_id "power:-VDC")
-		(at 203.2 138.43 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bd64fe95-af04-4d7e-803b-9152ca39f281")
-		(property "Reference" "#PWR016"
-			(at 203.2 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "-V"
-			(at 198.12 135.89 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"-VDC\""
-			(at 203.2 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c836a914-4ab7-4632-898b-730812b4b7b3")
-		)
-		(instances
-			(project "hifi_audio"
-				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-(symbol
-		(lib_id "power:GND")
-		(at 203.2 143.51 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4334d37d-18e2-4b12-897f-0a565a477b36")
-		(property "Reference" "#PWR017"
-			(at 203.2 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 203.2 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 203.2 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5b810d89-134d-4d21-8049-ee7b14c9933a")
-		)
-		(instances
-			(project "hifi_audio"
-				(path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
+
+
+
+
+
+
+
+(sheet (at 223.52 66.04) (size 40.64 44.45) (exclude_from_sim no) (in_bom yes) (on_board yes) (stroke (width .1524) (type solid)) (fill (color 0 0 0 0)) (uuid "cb838a63-d5e2-44ba-a4c7-99a4e5743183")
+(property "Sheetname" "Mute_SubBass" (at 223.52 63.5 0) (effects (font (size 1 1)))) (property "Sheetfile" "mute_subbass.kicad_sch" (at 223.52 113.03 0) (effects (font (size 1 1))))
+(pin "AUDIO_IN" input (at 223.52 99.06 180) (effects (font (size 1 1)) (justify left)) (uuid "8b0c0894-d27a-4c2a-86dc-440d20b97820"))
+(pin "AUDIO_OUT" output (at 264.16 78.74 0) (effects (font (size 1 1)) (justify right)) (uuid "aae0c896-1214-4844-91ce-823acf3676eb"))
+(pin "CTRL_PASSA" output (at 264.16 90.17 0) (effects (font (size 1 1)) (justify right)) (uuid "2c716b5d-71ad-4c05-956a-d5777372343a"))
+(instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (page "5")))))
+(wire (pts (xy 213.36 99.06) (xy 223.52 99.06)) (stroke (width 0) (type default)) (uuid "b034088f-301b-4574-b209-839972debcc8"))
+(wire (pts (xy 264.16 78.74) (xy 269.24 78.74)) (stroke (width 0) (type default)) (uuid "5fec3c6e-65b8-4db3-90ae-16948b3f525e"))
+(label "VOUT_SUB_MUTE" (at 269.24 78.74 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "3361e32e-ac47-44db-9fb4-c59c72fb90ac"))
+(wire (pts (xy 264.16 90.17) (xy 269.24 90.17)) (stroke (width 0) (type default)) (uuid "3fbe6937-43e0-412b-b973-6c9970544138"))
+(label "CTRL_PASSA" (at 269.24 90.17 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "b8fbc480-38e7-4760-8367-9809a363b66f"))
+(text "Mute físico em folha filha: LTC2909 + ADG5412F. Modelos locais de estudo." (at 30.48 43.18 0) (effects (font (size 1 1)) (justify left top)) (uuid "1358311d-74a4-4c1e-b2af-f9dd4c1bedad"))
+(text "Filtros concluídos em SPICE. Mute físico: protótipo e ensaios de bancada pendentes." (at 30.48 48.26 0) (effects (font (size 1 1)) (justify left top)) (uuid "e8acbb3f-11c3-4c6c-9c71-5e76ff5c3fa3"))
+(text "U4: supervisão +UV/-UV; U5: chave protegida. Ver detalhes na folha Mute_SubBass." (at 190.5 125.73 0) (effects (font (size 0.9 0.9)) (justify left top)) (uuid "3fa4ec7e-cf1f-4d85-9827-7a3e17599064"))
+(symbol (lib_id "Audio_HiFi:TESTPOINT") (at 269.24 78.74 0) (unit 1) (exclude_from_sim yes) (in_bom no) (on_board yes) (uuid "3e8deb5f-fdec-4b15-9dd3-c3602bec8dce") (property "Reference" "TP1" (at 269.24 74.92999999999999 0) (effects (font (size 1 1)))) (property "Value" "TestPoint" (at 269.24 78.74 0) (hide yes) (effects (font (size 1 1)))) (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 269.24 78.74 0) (hide yes) (effects (font (size 1 1)))) (pin "1" (uuid "0e6a0b3b-af88-49f8-971c-455aaef8bbc9")) (instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "TP1") (unit 1)))))
+(symbol (lib_id "Audio_HiFi:TESTPOINT") (at 269.24 90.17 0) (unit 1) (exclude_from_sim yes) (in_bom no) (on_board yes) (uuid "effffab6-5e48-4466-b9b4-a85cdd72b3bf") (property "Reference" "TP2" (at 269.24 86.36 0) (effects (font (size 1 1)))) (property "Value" "TestPoint" (at 269.24 90.17 0) (hide yes) (effects (font (size 1 1)))) (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 269.24 90.17 0) (hide yes) (effects (font (size 1 1)))) (pin "1" (uuid "461f0baf-2120-4cbe-8c32-a12e1cf68b3b")) (instances (project "hifi_audio" (path "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f" (reference "TP2") (unit 1)))))
 )

@@ -1,0 +1,50 @@
+* SubBass HW1 - local functional models for a concrete component proposal.
+* These are NOT vendor macromodels, transistor-level verification or hardware signoff.
+* LTC2909 model implements only SEL=open (+UV/-UV), TMR=ZREF (internal timeout).
+* External resistor dividers, shunt feed, clamps and bypass parts are on the schematic.
+* Threshold/time parameters permit documented corner studies, not statistical yield.
+.SUBCKT LTC2909_STUDY ADJ1 ADJ2 REF ZREF RST VCC TMR SEL PARAMS: VTH=0.5 VREF=1 UVLO=2.213 TRESET=200m TPD=500u
+BSHUNT VCC ZREF I={max(0,(V(VCC,ZREF)-6.5)/10)}
+BREF REF ZREF V={VREF*min(1,max(0,V(VCC,ZREF)/UVLO))}
+BIQ VCC ZREF I={250u*min(1,max(0,V(VCC,ZREF)/.5))}
+BSEL SEL ZREF V={min(.9,max(0,V(VCC,ZREF)))}
+* Matched transmission line approximates a pessimistic 500us detection delay.
+* Actual glitch rejection is amplitude-dependent; see datasheet, not a pure delay.
+BVALID RAW ZREF V={(V(ADJ1,ZREF)>=VTH && V(ADJ2,ZREF)<=VTH && V(VCC,ZREF)>UVLO) ? 10 : 0}
+RLOGIC RAW LIN 1k
+TLOGIC LIN ZREF VALID ZREF Z0=1k TD={TPD}
+RTERM VALID ZREF 1k
+BCHARGE CHARGE ZREF V={V(VALID,ZREF)>2.5 ? 5 : 0}
+RTIME CHARGE TIMER {TRESET/1u}
+CTIME TIMER ZREF 1u
+* Strong reset, without assuming a real exposed capacitor on the internal timer.
+BRESET TIMER ZREF I={V(VALID,ZREF)<2.5 ? V(TIMER,ZREF) : 0}
+BOD RST ZREF I={V(RST,ZREF)*((V(VALID,ZREF)>2.5 && V(TIMER,ZREF)>3.160602794 && V(VCC,ZREF)>UVLO) ? 1e-12 : .025)}
+.ENDS LTC2909_STUDY
+
+* TSSOP-16 pin order follows the actual ADG5412F package, not LFCSP numbering.
+* Constant RON, bounded off leakage, approximate capacitance and supply interlock.
+* Missing: charge injection, detailed Ron curvature, noise, THD, real propagation.
+* Charge injection is assessed separately as an imposed charge packet in verification.
+.SUBCKT ADG5412F_STUDY IN1 D1 S1 VSS ZREF S4 D4 IN4 IN3 D3 S3 FF VDD S2 D2 IN2 PARAMS: RON=10 IOFF=5n CFEED=1p
+BPATH1 S1 D1 I={V(S1,D1)*((V(IN1,ZREF)>2 && V(VDD,VSS)>=8 && V(S1,ZREF)>=V(VSS,ZREF)-.7 && V(S1,ZREF)<=V(VDD,ZREF)+.7) ? 1/RON : 1e-9)}
+BPATH2 S2 D2 I={V(S2,D2)*((V(IN2,ZREF)>2 && V(VDD,VSS)>=8) ? 1/RON : 1e-9)}
+BPATH3 S3 D3 I={V(S3,D3)*((V(IN3,ZREF)>2 && V(VDD,VSS)>=8) ? 1/RON : 1e-9)}
+BPATH4 S4 D4 I={V(S4,D4)*((V(IN4,ZREF)>2 && V(VDD,VSS)>=8) ? 1/RON : 1e-9)}
+BLEAK ZREF D1 I={V(IN1,ZREF)<.8 || V(VDD,VSS)<8 ? IOFF : 0}
+DDHI D1 VDD DRAIN_ESD
+DDLO VSS D1 DRAIN_ESD
+.MODEL DRAIN_ESD D(IS=1e-14 N=1.2 RS=1)
+CSD S1 D1 {CFEED}
+CD D1 ZREF 24p
+BIN IN1 ZREF I={V(IN1,ZREF)>0.1 ? 1.2u : 0}
+BFF FF ZREF V={V(VDD,VSS)>=8 ? 3 : 0}
+BIP VDD ZREF I={.4m*min(1,max(0,V(VDD,VSS)/8))}
+BIB VDD VSS I={.5m*min(1,max(0,V(VDD,VSS)/8))}
+.ENDS ADG5412F_STUDY
+
+* Approximate BAT54WS Schottky model. Verify cold clamp voltage in the prototype.
+.SUBCKT BAT54WS_STUDY K A
+DCLAMP A K BAT54_APPROX
+.MODEL BAT54_APPROX D(IS=200n N=1.06 RS=2 CJO=10p BV=30 IBV=2u)
+.ENDS BAT54WS_STUDY

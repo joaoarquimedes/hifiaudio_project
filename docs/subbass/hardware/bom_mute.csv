@@ -1,0 +1,17 @@
+Reference,Value,Tolerance,Power,Voltage,Dielectric,Footprint,MPN,Datasheet,Description,Quantity
+C7,100n,10%,,50V,X7R,Capacitor_SMD:C_0805_2012Metric,,,Desacoplamento,1
+C8,100n,10%,,50V,X7R,Capacitor_SMD:C_0805_2012Metric,,,Desacoplamento,1
+C9,100n,10%,,50V,X7R,Capacitor_SMD:C_0805_2012Metric,,,Desacoplamento,1
+C10,100n,5%,,50V,C0G,Capacitor_SMD:C_1206_3216Metric,,,Limita degrau por injeção de carga; validar em bancada,1
+D1,BAT54WS,,,,,Diode_SMD:D_SOD-323,BAT54WS-7-F,https://www.diodes.com/datasheet/download/BAT54WS.pdf,Clamp de ADJ_NEG quando +V está ausente,1
+R8,10k,1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Carga/bleed de saída do módulo,1
+R9,4.99k,0.1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Limita corrente do shunt interno de U4,1
+R10,249k,0.1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Divisor de supervisão,1
+R11,10k,0.1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Divisor de supervisão,1
+R12,10k,0.1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Divisor de supervisão,1
+R13,261k,0.1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Divisor de supervisão,1
+R14,10k,1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Pull-up do reset para o próprio VCC de U4,1
+R15,100k,1%,0.125W,,,Resistor_SMD:R_0805_2012Metric,,,Estado bloqueado sem alimentação,1
+R16,680,1%,0.25W,,,Resistor_SMD:R_1206_3216Metric,,,Limita corrente de dreno e isola C10; exigir capacidade de pulso >=15uJ,1
+U4,LTC2909ITS8-2.5,,,,,Package_TO_SOT_SMD:SOT-23-8,LTC2909ITS8-2.5#TRMPBF,https://www.analog.com/media/en/technical-documentation/data-sheets/2909fb.pdf,Supervisor +UV/-UV; SEL aberto; TMR em GND,1
+U5,ADG5412FBRUZ,,,,,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,ADG5412FBRUZ,https://www.analog.com/media/en/technical-documentation/data-sheets/ADG5412F_5413F.pdf,Chave analógica protegida; canal 1 em série; canais 2/3/4 desativados,1

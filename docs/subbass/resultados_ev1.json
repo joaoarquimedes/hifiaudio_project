@@ -1,0 +1,547 @@
+{
+  "status": "PASS",
+  "kicad": "10.0.7",
+  "ngspice_library": "/home/joaocosta/Applications/kicad/AppDir/shared/lib/libngspice.so",
+  "method": "gear",
+  "max_step_s": 2e-05,
+  "cases": {
+    "startup_shutdown": {
+      "status": "PASS",
+      "rows": 50741,
+      "edges": [
+        {
+          "time_s": 0.3086675877160644,
+          "state": 1
+        },
+        {
+          "time_s": 0.6120000551704989,
+          "state": 0
+        }
+      ],
+      "before_peak": {
+        "abs_V": 1.1016396854640176,
+        "time_s": 0.10076747535983732,
+        "value_V": -1.1016396854640176
+      },
+      "after_peak": {
+        "abs_V": 0.0004973988031457083,
+        "time_s": 0.3682207646766252,
+        "value_V": 0.0004973988031457083
+      },
+      "startup_before": {
+        "abs_V": 1.1016396854640176,
+        "time_s": 0.10076747535983732,
+        "value_V": -1.1016396854640176
+      },
+      "startup_after": {
+        "abs_V": 1.1016286691773256e-05,
+        "time_s": 0.10076747535983732,
+        "value_V": -1.1016286691773256e-05
+      },
+      "shutdown_before": {
+        "abs_V": 1.1001584391811614,
+        "time_s": 0.6192335118468661,
+        "value_V": -1.1001584391811614
+      },
+      "shutdown_after": {
+        "abs_V": 1.1001474377067842e-05,
+        "time_s": 0.6192335118468661,
+        "value_V": -1.1001474377067842e-05
+      }
+    },
+    "startup_shutdown_10us": {
+      "status": "PASS",
+      "rows": 100717,
+      "edges": [
+        {
+          "time_s": 0.30866639188722006,
+          "state": 1
+        },
+        {
+          "time_s": 0.6120004904864909,
+          "state": 0
+        }
+      ],
+      "before_peak": {
+        "abs_V": 1.1016375509661835,
+        "time_s": 0.10076747406505593,
+        "value_V": -1.1016375509661835
+      },
+      "after_peak": {
+        "abs_V": 0.0004973986503816044,
+        "time_s": 0.3682128368351033,
+        "value_V": 0.0004973986503816044
+      }
+    },
+    "positive_first": {
+      "status": "PASS",
+      "rows": 54135,
+      "edges": [
+        {
+          "time_s": 0.32867634772171345,
+          "state": 1
+        },
+        {
+          "time_s": 0.6119995835428689,
+          "state": 0
+        }
+      ],
+      "before_peak": {
+        "abs_V": 2.2514506159770034,
+        "time_s": 0.6384652810016975,
+        "value_V": -2.2514506159770034
+      },
+      "after_peak": {
+        "abs_V": 0.000496166262949743,
+        "time_s": 0.3359063477217207,
+        "value_V": 0.000496166262949743
+      }
+    },
+    "negative_first": {
+      "status": "PASS",
+      "rows": 50810,
+      "edges": [
+        {
+          "time_s": 0.32865675508531494,
+          "state": 1
+        },
+        {
+          "time_s": 0.6120000524067877,
+          "state": 0
+        }
+      ],
+      "before_peak": {
+        "abs_V": 2.2518472820286792,
+        "time_s": 0.10153431137087798,
+        "value_V": -2.2518472820286792
+      },
+      "after_peak": {
+        "abs_V": 0.0004983161027636842,
+        "time_s": 0.3935067550853798,
+        "value_V": 0.0004983161027636842
+      }
+    },
+    "positive_missing": {
+      "status": "PASS",
+      "rows": 50940,
+      "edges": [],
+      "before_peak": {
+        "abs_V": 2.2518472820286792,
+        "time_s": 0.10153431137087798,
+        "value_V": -2.2518472820286792
+      },
+      "after_peak": {
+        "abs_V": 2.251824763781041e-05,
+        "time_s": 0.10153431137087798,
+        "value_V": -2.251824763781041e-05
+      }
+    },
+    "negative_missing": {
+      "status": "PASS",
+      "rows": 50094,
+      "edges": [],
+      "before_peak": {
+        "abs_V": 0.04852869066072563,
+        "time_s": 0.101528166984961,
+        "value_V": 0.04852869066072563
+      },
+      "after_peak": {
+        "abs_V": 4.852820537867184e-07,
+        "time_s": 0.101528166984961,
+        "value_V": 4.852820537867184e-07
+      }
+    },
+    "both_missing": {
+      "status": "PASS",
+      "rows": 50006,
+      "edges": [],
+      "before_peak": {
+        "abs_V": 0.0010020573750046636,
+        "time_s": 3.2e-05,
+        "value_V": 0.0010020573750046636
+      },
+      "after_peak": {
+        "abs_V": 1.0020473545311182e-08,
+        "time_s": 3.2e-05,
+        "value_V": 1.0020473545311182e-08
+      }
+    },
+    "positive_fault": {
+      "status": "PASS",
+      "rows": 50696,
+      "edges": [
+        {
+          "time_s": 0.308666694468271,
+          "state": 1
+        },
+        {
+          "time_s": 0.45199936232041976,
+          "state": 0
+        },
+        {
+          "time_s": 0.7086665010813435,
+          "state": 1
+        }
+      ],
+      "before_peak": {
+        "abs_V": 2.8104119742798956,
+        "time_s": 0.212437542615873,
+        "value_V": 2.8104119742798956
+      },
+      "after_peak": {
+        "abs_V": 2.663721848312308,
+        "time_s": 0.3625237520091978,
+        "value_V": 2.663721848312308
+      }
+    },
+    "negative_fault": {
+      "status": "PASS",
+      "rows": 51359,
+      "edges": [
+        {
+          "time_s": 0.308666694468271,
+          "state": 1
+        },
+        {
+          "time_s": 0.4519999455941429,
+          "state": 0
+        },
+        {
+          "time_s": 0.7086675480418616,
+          "state": 1
+        }
+      ],
+      "before_peak": {
+        "abs_V": 2.8104119742798956,
+        "time_s": 0.212437542615873,
+        "value_V": 2.8104119742798956
+      },
+      "after_peak": {
+        "abs_V": 2.663721848312308,
+        "time_s": 0.3625237520091978,
+        "value_V": 2.663721848312308
+      }
+    },
+    "qualification_reset": {
+      "status": "PASS",
+      "rows": 50766,
+      "edges": [
+        {
+          "time_s": 0.4001219468743135,
+          "state": 1
+        }
+      ],
+      "before_peak": {
+        "abs_V": 2.8511309074021893,
+        "time_s": 0.20001002555351552,
+        "value_V": -2.8511309074021893
+      },
+      "after_peak": {
+        "abs_V": 0.0005007106868177692,
+        "time_s": 0.4686075588807144,
+        "value_V": 0.0005007106868177692
+      }
+    },
+    "hysteresis": {
+      "status": "PASS",
+      "rows": 50460,
+      "edges": [
+        {
+          "time_s": 0.3086679007278156,
+          "state": 1
+        },
+        {
+          "time_s": 0.496666633501381,
+          "state": 0
+        },
+        {
+          "time_s": 0.8516600000001917,
+          "state": 1
+        }
+      ],
+      "before_peak": {
+        "abs_V": 1.1016383604973154,
+        "time_s": 0.10076747295140989,
+        "value_V": -1.1016383604973154
+      },
+      "after_peak": {
+        "abs_V": 0.0004973988032649011,
+        "time_s": 0.3682210776961077,
+        "value_V": 0.0004973988032649011
+      }
+    },
+    "slow_ramp": {
+      "status": "PASS",
+      "rows": 50245,
+      "edges": [
+        {
+          "time_s": 0.47999984427780096,
+          "state": 1
+        }
+      ],
+      "before_peak": {
+        "abs_V": 1.1005133732261037,
+        "time_s": 0.043000307178143994,
+        "value_V": -1.1005133732261037
+      },
+      "after_peak": {
+        "abs_V": 0.0004958163837404459,
+        "time_s": 0.5075452020061412,
+        "value_V": 0.0004958163837404459
+      }
+    },
+    "undervoltage": {
+      "status": "PASS",
+      "rows": 50012,
+      "edges": [],
+      "before_peak": {
+        "abs_V": 0.0009306125532690516,
+        "time_s": 0.0032059801000896768,
+        "value_V": 0.0009306125532690516
+      },
+      "after_peak": {
+        "abs_V": 9.3060323793064e-09,
+        "time_s": 0.0032059801000896768,
+        "value_V": 9.3060323793064e-09
+      }
+    },
+    "wrong_polarity": {
+      "status": "PASS",
+      "rows": 50059,
+      "edges": [],
+      "before_peak": {
+        "abs_V": 14.997904035892036,
+        "time_s": 0.0,
+        "value_V": 14.997904035892036
+      },
+      "after_peak": {
+        "abs_V": 0.00014997754058351448,
+        "time_s": 0.0,
+        "value_V": 0.00014997754058351448
+      }
+    },
+    "nominal_audio": {
+      "status": "PASS",
+      "rows": 50012,
+      "edges": [],
+      "before_peak": {
+        "abs_V": 2.8100287338474086,
+        "time_s": 0.06242708827172892,
+        "value_V": 2.8100287338474086
+      },
+      "after_peak": {
+        "abs_V": 2.8097477590715014,
+        "time_s": 0.06242708827172892,
+        "value_V": 2.8097477590715014
+      },
+      "audio_before": {
+        "abs_V": 2.663780104922284,
+        "time_s": 0.7625270882722122,
+        "value_V": 2.663780104922284
+      },
+      "audio_after": {
+        "abs_V": 2.663513753546929,
+        "time_s": 0.7625270882722122,
+        "value_V": 2.663513753546929
+      }
+    },
+    "dc_rejection": {
+      "status": "PASS",
+      "rows": 50006,
+      "edges": [],
+      "before_peak": {
+        "abs_V": 0.0004958653230992111,
+        "time_s": 1e-06,
+        "value_V": 0.0004958653230992111
+      },
+      "after_peak": {
+        "abs_V": 0.0004958157415250585,
+        "time_s": 1e-06,
+        "value_V": 0.0004958157415250585
+      },
+      "steady_output": {
+        "abs_V": 0.0004958157301009485,
+        "time_s": 0.8053120000005238,
+        "value_V": 0.0004958157301009485
+      }
+    },
+    "ac_10k": {
+      "status": "PASS",
+      "analysis": "AC",
+      "response": [
+        {
+          "frequency_Hz": 0.9999999999999978,
+          "before_dB": -39.92949467173939,
+          "after_dB": -39.93036321727665,
+          "lp_dB": 6.33571793787877e-06,
+          "phase_deg": 169.81315633599846
+        },
+        {
+          "frequency_Hz": 5.011872336272701,
+          "before_dB": -12.200083016011128,
+          "after_dB": -12.200951561548381,
+          "lp_dB": -0.001059123844065504,
+          "phase_deg": 126.18460941823021
+        },
+        {
+          "frequency_Hz": 9.999999999999947,
+          "before_dB": -2.9918290657694473,
+          "after_dB": -2.9926976113067005,
+          "lp_dB": -0.016849284695458485,
+          "phase_deg": 69.03253237905096
+        },
+        {
+          "frequency_Hz": 19.952623149688662,
+          "before_dB": -0.5212254280937865,
+          "after_dB": -0.52209397363104,
+          "lp_dB": -0.2596581018607168,
+          "phase_deg": 0.08944643674631995
+        },
+        {
+          "frequency_Hz": 39.810717055349414,
+          "before_dB": -2.975785683694323,
+          "after_dB": -2.9766542292315763,
+          "lp_dB": -2.958783195158332,
+          "phase_deg": -68.83928871642792
+        },
+        {
+          "frequency_Hz": 99.99999999999906,
+          "before_dB": -16.007004916490214,
+          "after_dB": -16.00787346202747,
+          "lp_dB": -16.006550397470882,
+          "phase_deg": -137.90080050811972
+        },
+        {
+          "frequency_Hz": 999.9999999999872,
+          "before_dB": -55.896254379620565,
+          "after_dB": -55.89712292515782,
+          "lp_dB": -55.89622694827432,
+          "phase_deg": -175.9480637019615
+        }
+      ]
+    },
+    "ac_2k": {
+      "status": "PASS",
+      "analysis": "AC",
+      "response": [
+        {
+          "frequency_Hz": 0.9999999999999978,
+          "before_dB": -39.929494694300736,
+          "after_dB": -39.93383655374534,
+          "lp_dB": 6.335717939807424e-06,
+          "phase_deg": 169.81315624848637
+        },
+        {
+          "frequency_Hz": 5.011872336272701,
+          "before_dB": -12.200083070180362,
+          "after_dB": -12.204424929624968,
+          "lp_dB": -0.0010591238440664686,
+          "phase_deg": 126.1846092046489
+        },
+        {
+          "frequency_Hz": 9.999999999999947,
+          "before_dB": -2.9918291497874216,
+          "after_dB": -2.996171009232026,
+          "lp_dB": -0.016849284695460418,
+          "phase_deg": 69.03253231459239
+        },
+        {
+          "frequency_Hz": 19.952623149688662,
+          "before_dB": -0.5212254923403761,
+          "after_dB": -0.5255673517849809,
+          "lp_dB": -0.25965810186071575,
+          "phase_deg": 0.08944654750518237
+        },
+        {
+          "frequency_Hz": 39.810717055349414,
+          "before_dB": -2.9757857327390758,
+          "after_dB": -2.9801275921836807,
+          "lp_dB": -2.9587831951583348,
+          "phase_deg": -68.83928864180686
+        },
+        {
+          "frequency_Hz": 99.99999999999906,
+          "before_dB": -16.007004960771187,
+          "after_dB": -16.011346820215792,
+          "lp_dB": -16.006550397470885,
+          "phase_deg": -137.90080049414735
+        },
+        {
+          "frequency_Hz": 999.9999999999872,
+          "before_dB": -55.8962544214852,
+          "after_dB": -55.90059628092981,
+          "lp_dB": -55.89622694827432,
+          "phase_deg": -175.94806391638159
+        }
+      ]
+    }
+  },
+  "source_sha256": {
+    "subbass.kicad_sch": "5f4b143242fa784c5d69ac677a12c6b69c6785aa0fc71bbfa69d985a536274d7",
+    "Bancada_Simulacao.kicad_sch": "5fbd5b6226fcdb52aa79617d1cbd3337417db9dc862a4f99d30eadd56e0c5714",
+    "spice/SubBass/subbass_mute.lib": "e180570f7679ce42d3bb5e118b1ac832902ece138b9ba8420d6b3dad08f4ea50"
+  },
+  "validated_netlist_sha256": "44312e4a8f3e3a5505c015d62f15f2265217b0a9c68544de2fa418b723940b36",
+  "layout_cleanup_netlist_equivalence": "PASS (same sorted netlist lines)",
+  "erc": {
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-16T10:06:22",
+    "ignored_checks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ],
+    "included_severities": [
+      "error",
+      "warning"
+    ],
+    "kicad_version": "10.0.7",
+    "sheets": [
+      {
+        "path": "/",
+        "uuid_path": "/cacffc98-2318-42a9-a4e2-e2aa2b951373",
+        "violations": []
+      },
+      {
+        "path": "/fonte_alimentacao/",
+        "uuid_path": "/cacffc98-2318-42a9-a4e2-e2aa2b951373/84133fac-ecf2-4b99-8e78-8acda53d47db",
+        "violations": []
+      },
+      {
+        "path": "/Bancada_Simulacao/",
+        "uuid_path": "/cacffc98-2318-42a9-a4e2-e2aa2b951373/434ca058-052a-49ac-818c-ed2d85b34c25",
+        "violations": []
+      },
+      {
+        "path": "/subbass/",
+        "uuid_path": "/cacffc98-2318-42a9-a4e2-e2aa2b951373/ad6bf775-41d3-4b77-b1e8-7e04674efb8f",
+        "violations": []
+      }
+    ],
+    "source": "hifi_audio.kicad_sch"
+  },
+  "erc_violation_count": 0,
+  "additional_erc": {
+    "simulation_model_check_enabled": true,
+    "error_count": 0,
+    "warning_count": 14,
+    "warning_types": [
+      "footprint_filter"
+    ]
+  },
+  "reproduce_command": "python3 tools/verify_subbass.py --output /tmp/subbass-verificacao"
+}
